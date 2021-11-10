@@ -1,0 +1,47 @@
+
+
+/// VALIDACION SAFARI
+
+@media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
+    & {
+    	main {
+    		background: url('../img/top-right-c.svg') no-repeat 110% 100px / 25%,
+                    url('../img/back@2x.png') no-repeat center top / cover;
+    	}
+
+		.footer--sponsors {
+				background: url('../img/backFooter.jpg') center/cover no-repeat;
+		}
+
+		.medidas {
+			background: url('../img/top-right-c.svg') right 100px/30% no-repeat,
+							url('../img/back2@2x.png') center top/cover no-repeat !important;
+		}
+
+	}
+
+	/// MOBILE
+	@media (max-width:992px) {
+		main {
+			background: none !important;
+			
+			&::before{
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: url('../img/back-mobile.png') no-repeat center top / cover;
+			}
+		}
+
+		.medidas {
+			background: url('../img/back2@2x.png') center top/cover no-repeat !important;
+		}
+		
+		
+	}
+
+	// 992
+}}

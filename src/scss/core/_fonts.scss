@@ -1,0 +1,37 @@
+
+
+@font-face {
+	font-family: 'ManropeRegular';
+	src: url('../fonts/Primaria/Manrope-Regular.eot');
+	src: local('☺'),
+			url('../fonts/Primaria/Manrope-Regular.woff') format('woff'), 
+			url('../fonts/Primaria/Manrope-Regular.ttf') format('truetype'), 
+			url('../fonts/Primaria/Manrope-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Manrope-SemiBold';
+	src: url('../fonts/PrimariaSemibold/Manrope-SemiBold.eot');
+	src: local('☺'), 
+			url('../fonts/PrimariaSemibold/Manrope-SemiBold.woff') format('woff'), 
+			url('../fonts/PrimariaSemibold/Manrope-SemiBold.ttf') format('truetype'), 
+			url('../fonts/PrimariaSemibold/Manrope-SemiBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ManropeBold';
+	src: url('../fonts/PrimariaBold/Manrope-Bold.eot');
+	src: local('☺'), 
+			url('../fonts/PrimariaBold/Manrope-Bold.woff') format('woff'), 
+			url('../fonts/PrimariaBold/Manrope-Bold.ttf') format('truetype'), 
+			url('../fonts/PrimariaBold/Manrope-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

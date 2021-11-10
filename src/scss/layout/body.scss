@@ -1,0 +1,13 @@
+// **** \\ STYLES_CSS // **** // 
+
+
+body {
+    
+    @import "header";
+    @import "footer";
+    @import "media";
+    @import "sidebar";
+    
+    @import "pages/globals";
+    @import "pages/_home";
+}
