@@ -6,10 +6,13 @@ html(lang='es')
 
 	body
 		include includes/header.pug
-		include includes/sidebar.pug
+
 
 		main.home
+
 			section.hero 
+				include includes/sidebar.pug
+
 				.container 
 					.row 
 						.col-lg-8.offset-lg-2
@@ -51,15 +54,47 @@ html(lang='es')
 							h3.title_shadow My education
 								span My education
 
-						.col-12 
-							.swiper
+						.col-lg-4.education--col-img
+							.swiper#swiper_img
 								.swiper-wrapper
-									.swiper-slide#slide1
+									.swiper-slide
 										.swiper-slide__img
 											picture 
-												source(srcset="../img/Desktop/Carrusel-01.webp" type="image/webp")
-												img.img-fluid.img-fit(src="../img/Desktop/Carrusel-01.jpg" alt="Gayosso")
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-01.webp" type="image/webp")
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-01.jpg")
+												source(srcset="img/Desktop/Carrusel-01.webp" type="image/webp")
+												img.img-fluid.img-fit(src="img/Desktop/Carrusel-01.jpg")
 
+
+									.swiper-slide
+										.swiper-slide__img
+											picture 
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-02.webp" type="image/webp")
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-02.jpg")
+												source(srcset="img/Desktop/Carrusel-02.webp" type="image/webp")
+												img.img-fluid.img-fit(src="img/Desktop/Carrusel-02.jpg")
+
+									.swiper-slide
+										.swiper-slide__img
+											picture 
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-03.webp" type="image/webp")
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-03.jpg")
+												source(srcset="img/Desktop/Carrusel-03.webp" type="image/webp")
+												img.img-fluid.img-fit(src="img/Desktop/Carrusel-03.jpg")
+
+									.swiper-slide
+										.swiper-slide__img
+											picture 
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-04.webp" type="image/webp")
+												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-04.jpg")
+												source(srcset="img/Desktop/Carrusel-04.webp" type="image/webp")
+												img.img-fluid.img-fit(src="img/Desktop/Carrusel-04.jpg")
+
+						.col-lg-8.education--col-content
+							.swiper#swiper_content
+								.swiper-wrapper
+
+									.swiper-slide#slide0
 										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 Master in Creativity for Design
@@ -67,6 +102,8 @@ html(lang='es')
 													span 
 														b 2006 - 2008
 
+									.swiper-slide#slide1
+										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 Bachelor of Graphic Communication
 												h5 Universidad Nacional Autónoma de México 
@@ -74,11 +111,6 @@ html(lang='es')
 														b 1997 - 2000
 
 									.swiper-slide#slide2
-										.swiper-slide__img
-											picture 
-												source(srcset="../img/Desktop/Carrusel-02.webp" type="image/webp")
-												img.img-fluid.img-fit(src="../img/Desktop/Carrusel-02.jpg" alt="Gayosso")
-
 										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 SAFe® 5 Agilist
@@ -86,18 +118,15 @@ html(lang='es')
 													span 
 														b 2021
 
+									.swiper-slide#slide3
+										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 NNg UX Manager, ID 1034823
 												h5 Description
 													span 
 														b 2021
 
-									.swiper-slide#slide3
-										.swiper-slide__img
-											picture 
-												source(srcset="../img/Desktop/Carrusel-03.webp" type="image/webp")
-												img.img-fluid.img-fit(src="../img/Desktop/Carrusel-03.jpg" alt="Gayosso")
-
+									.swiper-slide#slide4
 										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 NNg
@@ -105,18 +134,15 @@ html(lang='es')
 													span 
 														b 2021
 
+									.swiper-slide#slide5
+										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 NNg UX Manager, ID 1034823
 												h5 UX Roadmaps | Measuring UX and ROI | DesignOps: Scaling UX Design and User Research | Being a UX Leader Essential Skills for any UX Practitioner | Design Tradeoffs and UX Decision Frameworks | Engaging Stakeholders to Build Buy-in
 													span 
 														b 2020
 
-									.swiper-slide#slide4
-										.swiper-slide__img
-											picture 
-												source(srcset="../img/Desktop/Carrusel-04.webp" type="image/webp")
-												img.img-fluid.img-fit(src="../img/Desktop/Carrusel-04.jpg" alt="Gayosso")
-
+									.swiper-slide#slide6
 										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 Acumen Academy
@@ -128,6 +154,8 @@ html(lang='es')
 													span 
 														b 2019
 
+									.swiper-slide#slide7
+										.swiper-slide__copy
 											.swiper-slide__copy__parrafo
 												h4 Other courses
 												h5 User Research and Design.
@@ -145,7 +173,6 @@ html(lang='es')
 												h5 Human-computer Interaction
 													span 
 														b 2013
-
 
 
 								.swiper-nav
@@ -189,18 +216,24 @@ html(lang='es')
 							h3.title_shadow Software
 								span Software
 
-						.col-10.offset-lg-2.software__lista
+						.col-12.col-lg-10.offset-lg-2.software__lista
 							ul.objetFade
 								li Miro
 								li Sketch
 								li Abstract
+								li Overflow
+								li Adobe Suite
+								li UXPin
+								li InVision
+								li Brackets
+								li Sublime
 
-							ul.objetFade
+							//- ul.objetFade
 								li Overflow
 								li Adobe Suite
 								li UXPin
 
-							ul.objetFade
+							//- ul.objetFade
 								li InVision
 								li Brackets
 								li Sublime
@@ -216,8 +249,10 @@ html(lang='es')
 							a(href="#!") 
 								.work__card 
 									picture 
+										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.webp" type="image/webp")
+										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.jpg")
 										source(srcset="img/Desktop/Proyectos/CardProyecto-01.webp" type="image/webp")
-										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-01.webp")
+										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-01.jpg")
 
 									.work__card__copy 
 										h4 
@@ -228,8 +263,10 @@ html(lang='es')
 							a(href="#!") 
 								.work__card 
 									picture 
+										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.webp" type="image/webp")
+										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.jpg")
 										source(srcset="img/Desktop/Proyectos/CardProyecto-02.webp" type="image/webp")
-										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-02.webp")
+										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-02.jpg")
 
 									.work__card__copy 
 										h4 
@@ -240,8 +277,10 @@ html(lang='es')
 							a(href="#!") 
 								.work__card 
 									picture 
+										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.webp" type="image/webp")
+										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.jpg")
 										source(srcset="img/Desktop/Proyectos/CardProyecto-03.webp" type="image/webp")
-										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-03.webp")
+										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-03.jpg")
 
 									.work__card__copy 
 										h4 
@@ -256,7 +295,7 @@ html(lang='es')
 							h3 Among other companies and multiple clients
 							h2 I have worked for
 
-						.col-10.worked__logos.objetFade
+						.col-12.col-lg-10.worked__logos.objetFade
 							picture 
 								source(srcset="img/Logos/Work01.webp" type="image/webp")
 								img.img-fluid(src="img/Logos/Work01.webp")
@@ -291,8 +330,8 @@ html(lang='es')
 						.col-lg-10.offset-lg-1
 							h2.title-back RESUME
 
-					.row 
-						.col-lg-10.offset-lg-1.resume--wrap.d-flex
+					.row.justify-content-center
+						.col-lg-10.col-11.offset-lg-1.resume--wrap.d-flex
 							picture 
 								source(srcset="img/Desktop/CV.webp" type="image/webp")
 								img.img-fluid(srcset="img/Desktop/CV.jpg")
