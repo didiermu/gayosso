@@ -3,7 +3,7 @@
 	.hero{
 		padding-top: 180px !important;
 		min-height: 900px;
-		background: url('../../img/Desktop/BG-Hero-2x.webp') no-repeat center top / cover;
+		background: url('../img/Desktop/BG-Hero-2x.webp') no-repeat center top / cover;
 		
 
 		h1{
@@ -96,22 +96,22 @@
 				
 				&#slide0 .swiper-slide__copy::before,
 				&#slide4 .swiper-slide__copy::before{
-					background: url('../../img/Icons/flag.svg') no-repeat center / 40% var(--purple_dos);
+					background: url('../img/Icons/flag.svg') no-repeat center / 40% var(--purple_dos);
 				}
 				
 				&#slide1 .swiper-slide__copy::before,
 				&#slide5 .swiper-slide__copy::before{
-					background: url('../../img/Icons/flag.svg') no-repeat center / 40% var(--orange_dos);
+					background: url('../img/Icons/flag.svg') no-repeat center / 40% var(--orange_dos);
 				}
 				
 				&#slide2 .swiper-slide__copy::before,
 				&#slide6 .swiper-slide__copy::before{
-					background: url('../../img/Icons/flag.svg') no-repeat center / 40% var(--pink_2);
+					background: url('../img/Icons/flag.svg') no-repeat center / 40% var(--pink_2);
 				}
 				
 				&#slide3 .swiper-slide__copy::before,
 				&#slide7 .swiper-slide__copy::before{
-					background: url('../../img/Icons/flag.svg') no-repeat center / 40% var(--aqua);
+					background: url('../img/Icons/flag.svg') no-repeat center / 40% var(--aqua);
 				}
 				
 				&__img{
@@ -491,7 +491,7 @@
 
 		.hero{
 			position: relative;
-			background: url('../../img/Mobile/BG-Hero-2x.webp') no-repeat center top / cover;
+			background: url('../img/Mobile/BG-Hero-2x.webp') no-repeat center top / cover;
 			padding: 100px 0 0 !important;
 			min-height: auto;
 

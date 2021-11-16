@@ -2,346 +2,337 @@
 
 doctype
 html(lang='es')
-	include includes/head.pug
+   include includes/head.pug
 
-	body
-		include includes/header.pug
-
-
-		main.home
-
-			section.hero 
-				include includes/sidebar.pug
-
-				.container 
-					.row 
-						.col-lg-8.offset-lg-2
-							h1 
-								b We are made from what came before. We make ourselves out of the promises that lie ahead. 
-									span And we are always in the process of becoming. 
-
-							h5.text-decorated Jacqueline Novogratz
-
-							.col-lg-4.offset-lg-5.hero--pic
-								picture 
-									source(srcset="../img/Desktop/Sonia.webp" type="image/webp")
-									img.img-fluid(src="../img/Desktop/Sonia.jpg" alt="Gayosso")
-
-			section.about
-				.container 
-					.row 
-						.col-lg-7.offset-lg-1
-							h2.title-back ABOUT
-
-							p After working as designer and front-end amateur for 7+ years, my UX career began in 2012. During this time I've had the privilege of working for diverse organizational structures, sectors and projects; including corporate environments, startups, government and non-profit organizations.
-
-							p My day-to-day challenges are immerse in the cycle of discerning and cascading the user research findings, and the product value from business strategy to implementation. The scope of my practice includes stakeholder alignment, reviewing cross-department design processes, identifying and closing the gap between teams, creating a collaborative atmosphere, implementing strategic workshops and change management programs to reduce organizational fragmentation and silos practices.
-
-						.col-lg-4 
-							h2 I enjoy 
-								br 
-								| learning 
-								br
-								| every day! 
-
-							h5 I'm passionate about unbiased and cross-cultural content. In the near future I aspire to become a facilitator/accelerator of sustainable change in social enterprises.
-
-			section.education
-				.timeline
-				.container 
-					.row 
-						.col-11.offset-lg-1
-							h3.title_shadow My education
-								span My education
-
-						.col-lg-4.education--col-img
-							.swiper#swiper_img
-								.swiper-wrapper
-									.swiper-slide
-										.swiper-slide__img
-											picture 
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-01.webp" type="image/webp")
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-01.jpg")
-												source(srcset="img/Desktop/Carrusel-01.webp" type="image/webp")
-												img.img-fluid.img-fit(src="img/Desktop/Carrusel-01.jpg")
+   body
+      include includes/header.pug
 
 
-									.swiper-slide
-										.swiper-slide__img
-											picture 
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-02.webp" type="image/webp")
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-02.jpg")
-												source(srcset="img/Desktop/Carrusel-02.webp" type="image/webp")
-												img.img-fluid.img-fit(src="img/Desktop/Carrusel-02.jpg")
+      main.home
 
-									.swiper-slide
-										.swiper-slide__img
-											picture 
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-03.webp" type="image/webp")
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-03.jpg")
-												source(srcset="img/Desktop/Carrusel-03.webp" type="image/webp")
-												img.img-fluid.img-fit(src="img/Desktop/Carrusel-03.jpg")
+         section.hero 
+            include includes/sidebar.pug
 
-									.swiper-slide
-										.swiper-slide__img
-											picture 
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-04.webp" type="image/webp")
-												source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-04.jpg")
-												source(srcset="img/Desktop/Carrusel-04.webp" type="image/webp")
-												img.img-fluid.img-fit(src="img/Desktop/Carrusel-04.jpg")
+            .container 
+               .row 
+                  .col-lg-8.offset-lg-2
+                     h1 
+                        b We are made from what came before. We make ourselves out of the promises that lie ahead. 
+                           span And we are always in the process of becoming. 
 
-						.col-lg-8.education--col-content
-							.swiper#swiper_content
-								.swiper-wrapper
+                     h5.text-decorated Jacqueline Novogratz
 
-									.swiper-slide#slide0
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 Master in Creativity for Design
-												h5 Instituto Nacional de Bellas Artes 
-													span 
-														b 2006 - 2008
+                     .col-lg-4.offset-lg-5.hero--pic
+                        picture 
+                           source(srcset="img/Desktop/Sonia.webp" type="image/webp")
+                           img.img-fluid(src="img/Desktop/Sonia.jpg" alt="Gayosso")
 
-									.swiper-slide#slide1
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 Bachelor of Graphic Communication
-												h5 Universidad Nacional Autónoma de México 
-													span 
-														b 1997 - 2000
+         section.about#about
+            .container 
+               .row 
+                  .col-lg-7.offset-lg-1
+                     h2.title-back ABOUT
 
-									.swiper-slide#slide2
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 SAFe® 5 Agilist
-												h5 Description
-													span 
-														b 2021
+                     p After working as designer and front-end amateur for 7+ years, my UX career began in 2012. During this time I've had the privilege of working for diverse organizational structures, sectors and projects; including corporate environments, startups, government and non-profit organizations.
 
-									.swiper-slide#slide3
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 NNg UX Manager, ID 1034823
-												h5 Description
-													span 
-														b 2021
+                     p My day-to-day challenges are immerse in the cycle of discerning and cascading the user research findings, and the product value from business strategy to implementation. The scope of my practice includes stakeholder alignment, reviewing cross-department design processes, identifying and closing the gap between teams, creating a collaborative atmosphere, implementing strategic workshops and change management programs to reduce organizational fragmentation and silos practices.
 
-									.swiper-slide#slide4
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 NNg
-												h5 Analytics and User Experience, How to Interpret | UX Numbers: Statistics for UX 
-													span 
-														b 2021
+                  .col-lg-4 
+                     h2 I enjoy 
+                        br 
+                        | learning 
+                        br
+                        | every day! 
 
-									.swiper-slide#slide5
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 NNg UX Manager, ID 1034823
-												h5 UX Roadmaps | Measuring UX and ROI | DesignOps: Scaling UX Design and User Research | Being a UX Leader Essential Skills for any UX Practitioner | Design Tradeoffs and UX Decision Frameworks | Engaging Stakeholders to Build Buy-in
-													span 
-														b 2020
+                     h5 I'm passionate about unbiased and cross-cultural content. In the near future I aspire to become a facilitator/accelerator of sustainable change in social enterprises.
 
-									.swiper-slide#slide6
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 Acumen Academy
-												h5 Systems Practice | Lean Data Approaches to Measure Social Impact 
-													span 
-														b 2020
+         section.education
+            .timeline
+            .container 
+               .row 
+                  .col-11.offset-lg-1
+                     h3.title_shadow My education
+                        span My education
 
-												h5 Adaptive Leadership: Mobilizing for Change
-													span 
-														b 2019
-
-									.swiper-slide#slide7
-										.swiper-slide__copy
-											.swiper-slide__copy__parrafo
-												h4 Other courses
-												h5 User Research and Design.
-													span 
-														b 2018
-
-												h5 CSS and Java Script | Front-end Web and Bootstrap
-													span 
-														b 2016
-
-												h5 Multichannel Marketing Training for Marketers | Business Analysis Requirements Management and Communication
-													span 
-														b 2014
-
-												h5 Human-computer Interaction
-													span 
-														b 2013
+                  .col-lg-4.education--col-img
+                     .swiper#swiper_img
+                        .swiper-wrapper
+                           .swiper-slide
+                              .swiper-slide__img
+                                 picture 
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-01.webp" type="image/webp")
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-01.jpg")
+                                    source(srcset="img/Desktop/Carrusel-01.webp" type="image/webp")
+                                    img.img-fluid.img-fit(src="img/Desktop/Carrusel-01.jpg")
 
 
-								.swiper-nav
-									.swiper-button-prev &#8592;
-									.swiper-button-next &#8594;
+                           .swiper-slide
+                              .swiper-slide__img
+                                 picture 
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-02.webp" type="image/webp")
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-02.jpg")
+                                    source(srcset="img/Desktop/Carrusel-02.webp" type="image/webp")
+                                    img.img-fluid.img-fit(src="img/Desktop/Carrusel-02.jpg")
 
-									.swiper-pagination
+                           .swiper-slide
+                              .swiper-slide__img
+                                 picture 
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-03.webp" type="image/webp")
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-03.jpg")
+                                    source(srcset="img/Desktop/Carrusel-03.webp" type="image/webp")
+                                    img.img-fluid.img-fit(src="img/Desktop/Carrusel-03.jpg")
 
-			section.skills
-				.container 
-					.row 
-						.col-11.offset-lg-1
-							h3.title_shadow Skills
-								span Skills
+                           .swiper-slide
+                              .swiper-slide__img
+                                 picture 
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-04.webp" type="image/webp")
+                                    source(media="(max-width: 992px)" srcset="img/Mobile/Carrusel-04.jpg")
+                                    source(srcset="img/Desktop/Carrusel-04.webp" type="image/webp")
+                                    img.img-fluid.img-fit(src="img/Desktop/Carrusel-04.jpg")
 
-						.row.skills__row.objetFade
-							h3.text_uno Creative Collaboration
-							h3 Design Operations
-							h3.text_dos Roadmaps and Backlog
-						.row.skills__row.objetFade
-							h3 Branding
-							h3.text_tres UX Strategy
-							h3 Design Systems
-							h3.text_uno User research Objectives
-							h3 Prototyping
-						.row.skills__row.objetFade
-							h3.text_dos Design Thinking
-							h3 Visual Design
-							h3.text_tres Design Facilitation
-							h3 Business Agility
-						.row.skills__row.objetFade
-							h3 Ideation / Brainstorming
-							h3.text_uno Internationalization
-							h3 SAFe®
-							h3.text_dos Lean-Agile
+                  .col-lg-8.education--col-content
+                     .swiper#swiper_content
+                        .swiper-wrapper
 
-			section.software
-				.container 
-					.row 
-						.col-11.offset-lg-1
-							h3.title_shadow Software
-								span Software
+                           .swiper-slide#slide0
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 Master in Creativity for Design
+                                    h5 Instituto Nacional de Bellas Artes 
+                                       span 
+                                          b 2006 - 2008
 
-						.col-12.col-lg-10.offset-lg-2.software__lista
-							ul.objetFade
-								li Miro
-								li Sketch
-								li Abstract
-								li Overflow
-								li Adobe Suite
-								li UXPin
-								li InVision
-								li Brackets
-								li Sublime
+                           .swiper-slide#slide1
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 Bachelor of Graphic Communication
+                                    h5 Universidad Nacional Autónoma de México 
+                                       span 
+                                          b 1997 - 2000
 
-							//- ul.objetFade
-								li Overflow
-								li Adobe Suite
-								li UXPin
+                           .swiper-slide#slide2
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 SAFe® 5 Agilist
+                                    h5 Description
+                                       span 
+                                          b 2021
 
-							//- ul.objetFade
-								li InVision
-								li Brackets
-								li Sublime
+                           .swiper-slide#slide3
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 NNg UX Manager, ID 1034823
+                                    h5 Description
+                                       span 
+                                          b 2021
 
-			section.work
-				.container 
-					.row 
-						.col-lg-7.offset-lg-1
-							h2.title-back WORK
+                           .swiper-slide#slide4
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 NNg
+                                    h5 Analytics and User Experience, How to Interpret | UX Numbers: Statistics for UX 
+                                       span 
+                                          b 2021
 
-					.row
-						.col-12.d-flex.work__row
-							a(href="#!") 
-								.work__card 
-									picture 
-										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.webp" type="image/webp")
-										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.jpg")
-										source(srcset="img/Desktop/Proyectos/CardProyecto-01.webp" type="image/webp")
-										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-01.jpg")
+                           .swiper-slide#slide5
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 NNg UX Manager, ID 1034823
+                                    h5 UX Roadmaps | Measuring UX and ROI | DesignOps: Scaling UX Design and User Research | Being a UX Leader Essential Skills for any UX Practitioner | Design Tradeoffs and UX Decision Frameworks | Engaging Stakeholders to Build Buy-in
+                                       span 
+                                          b 2020
 
-									.work__card__copy 
-										h4 
-											b Framing requirements as hypothesis
+                           .swiper-slide#slide6
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 Acumen Academy
+                                    h5 Systems Practice | Lean Data Approaches to Measure Social Impact 
+                                       span 
+                                          b 2020
 
-										h6 There’s some UX in your PM
+                                    h5 Adaptive Leadership: Mobilizing for Change
+                                       span 
+                                          b 2019
 
-							a(href="#!") 
-								.work__card 
-									picture 
-										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.webp" type="image/webp")
-										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.jpg")
-										source(srcset="img/Desktop/Proyectos/CardProyecto-02.webp" type="image/webp")
-										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-02.jpg")
+                           .swiper-slide#slide7
+                              .swiper-slide__copy
+                                 .swiper-slide__copy__parrafo
+                                    h4 Other courses
+                                    h5 User Research and Design.
+                                       span 
+                                          b 2018
 
-									.work__card__copy 
-										h4 
-											b Design Sprints for long projects
+                                    h5 CSS and Java Script | Front-end Web and Bootstrap
+                                       span 
+                                          b 2016
 
-										h6 Internal collaboration through workshops
+                                    h5 Multichannel Marketing Training for Marketers | Business Analysis Requirements Management and Communication
+                                       span 
+                                          b 2014
 
-							a(href="#!") 
-								.work__card 
-									picture 
-										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.webp" type="image/webp")
-										source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.jpg")
-										source(srcset="img/Desktop/Proyectos/CardProyecto-03.webp" type="image/webp")
-										img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-03.jpg")
-
-									.work__card__copy 
-										h4 
-											b Service Design and Digital Transformation
-
-										h6 Closing the gaps on a strict corporate environment
-
-			section.worked
-				.container 
-					.row 
-						.col-12
-							h3 Among other companies and multiple clients
-							h2 I have worked for
-
-						.col-12.col-lg-10.worked__logos.objetFade
-							picture 
-								source(srcset="img/Logos/Work01.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Work01.webp")
-							picture 
-								source(srcset="img/Logos/Work02.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Work02.webp")
-							picture 
-								source(srcset="img/Logos/Work03.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Work03.webp")
-							picture 
-								source(srcset="img/Logos/Work04.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Work04.webp")
-
-					.row 
-						.col-12 
-							h4 and I have volunteered for...
-
-						.col-lg-7.worked__logos.objetFade
-							picture 
-								source(srcset="img/Logos/Voluntariado01.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Voluntariado01.webp")
-							picture 
-								source(srcset="img/Logos/Voluntariado02.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Voluntariado02.webp")
-							picture 
-								source(srcset="img/Logos/Voluntariado03.webp" type="image/webp")
-								img.img-fluid(src="img/Logos/Voluntariado03.webp")
-
-			section.resume
-				.container 
-					.row 
-						.col-lg-10.offset-lg-1
-							h2.title-back RESUME
-
-					.row.justify-content-center
-						.col-lg-10.col-11.offset-lg-1.resume--wrap.d-flex
-							picture 
-								source(srcset="img/Desktop/CV.webp" type="image/webp")
-								img.img-fluid(srcset="img/Desktop/CV.jpg")
-
-							.resume--wrap--copy
-								h2 Learn more about me! 
-								h4 Find out more about my studies and professional experience.
-
-								a(href="#!" target="_blank") 
-									button.boton.primario View resume
+                                    h5 Human-computer Interaction
+                                       span 
+                                          b 2013
 
 
-			include includes/footer.pug
+                        .swiper-nav
+                           .swiper-button-prev &#8592;
+                           .swiper-button-next &#8594;
+
+                           .swiper-pagination
+
+         section.skills
+            .container 
+               .row 
+                  .col-11.offset-lg-1
+                     h3.title_shadow Skills
+                        span Skills
+
+                  .row.skills__row.objetFade
+                     h3.text_uno Creative Collaboration
+                     h3 Design Operations
+                     h3.text_dos Roadmaps and Backlog
+                  .row.skills__row.objetFade
+                     h3 Branding
+                     h3.text_tres UX Strategy
+                     h3 Design Systems
+                     h3.text_uno User research Objectives
+                     h3 Prototyping
+                  .row.skills__row.objetFade
+                     h3.text_dos Design Thinking
+                     h3 Visual Design
+                     h3.text_tres Design Facilitation
+                     h3 Business Agility
+                  .row.skills__row.objetFade
+                     h3 Ideation / Brainstorming
+                     h3.text_uno Internationalization
+                     h3 SAFe®
+                     h3.text_dos Lean-Agile
+
+         section.software
+            .container 
+               .row 
+                  .col-11.offset-lg-1
+                     h3.title_shadow Software
+                        span Software
+
+                  .col-12.col-lg-10.offset-lg-2.software__lista
+                     ul.objetFade
+                        li Miro
+                        li Sketch
+                        li Abstract
+                        li Overflow
+                        li Adobe Suite
+                        li UXPin
+                        li InVision
+                        li Brackets
+                        li Sublime
+
+
+         section.work#work
+            .container 
+               .row 
+                  .col-lg-7.offset-lg-1
+                     h2.title-back WORK
+
+               .row
+                  .col-12.d-flex.work__row
+                     a(href="project_one.html") 
+                        .work__card 
+                           picture 
+                              source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.webp" type="image/webp")
+                              source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.jpg")
+                              source(srcset="img/Desktop/Proyectos/CardProyecto-01.webp" type="image/webp")
+                              img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-01.jpg")
+
+                           .work__card__copy 
+                              h4 
+                                 b Framing requirements as hypothesis
+
+                              h6 There’s some UX in your PM
+
+                     a(href="project_two.html") 
+                        .work__card 
+                           picture 
+                              source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.webp" type="image/webp")
+                              source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.jpg")
+                              source(srcset="img/Desktop/Proyectos/CardProyecto-02.webp" type="image/webp")
+                              img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-02.jpg")
+
+                           .work__card__copy 
+                              h4 
+                                 b Design Sprints for long projects
+
+                              h6 Internal collaboration through workshops
+
+                     a(href="project_three.html") 
+                        .work__card 
+                           picture 
+                              source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.webp" type="image/webp")
+                              source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.jpg")
+                              source(srcset="img/Desktop/Proyectos/CardProyecto-03.webp" type="image/webp")
+                              img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-03.jpg")
+
+                           .work__card__copy 
+                              h4 
+                                 b Service Design and Digital Transformation
+
+                              h6 Closing the gaps on a strict corporate environment
+
+         section.worked
+            .container 
+               .row 
+                  .col-12
+                     h3 Among other companies and multiple clients
+                     h2 I have worked for
+
+                  .col-12.col-lg-10.worked__logos.objetFade
+                     picture 
+                        source(srcset="img/Logos/Work01.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Work01.webp")
+                     picture 
+                        source(srcset="img/Logos/Work02.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Work02.webp")
+                     picture 
+                        source(srcset="img/Logos/Work03.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Work03.webp")
+                     picture 
+                        source(srcset="img/Logos/Work04.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Work04.webp")
+
+               .row 
+                  .col-12 
+                     h4 and I have volunteered for...
+
+                  .col-lg-7.worked__logos.objetFade
+                     picture 
+                        source(srcset="img/Logos/Voluntariado01.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Voluntariado01.webp")
+                     picture 
+                        source(srcset="img/Logos/Voluntariado02.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Voluntariado02.webp")
+                     picture 
+                        source(srcset="img/Logos/Voluntariado03.webp" type="image/webp")
+                        img.img-fluid(src="img/Logos/Voluntariado03.webp")
+
+         section.resume#resume
+            .container 
+               .row 
+                  .col-lg-10.offset-lg-1
+                     h2.title-back RESUME
+
+               .row.justify-content-center
+                  .col-lg-10.col-11.offset-lg-1.resume--wrap.d-flex
+                     picture 
+                        source(srcset="img/Desktop/CV.webp" type="image/webp")
+                        img.img-fluid(srcset="img/Desktop/CV.jpg")
+
+                     .resume--wrap--copy
+                        h2 Learn more about me! 
+                        h4 Find out more about my studies and professional experience.
+
+                        a(href="#!" target="_blank") 
+                           button.boton.primario View resume
+
+
+         include includes/footer.pug

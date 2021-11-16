@@ -116,5 +116,7 @@ swiperInfo = () => {
 
 $(function () {
   // swiperImage();
-  swiperInfo();
+  if ($("main").hasClass("home")) {
+    swiperInfo();
+  }
 });

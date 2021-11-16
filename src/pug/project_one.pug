@@ -1,0 +1,412 @@
+-titulo =  "Sonia Gayosso"
+
+doctype
+html(lang='es')
+   include includes/head.pug
+
+   body
+      include includes/header.pug
+
+      main.projects
+
+         section.hero 
+            include includes/sidebar.pug
+
+            .container 
+               .row 
+                  .col-lg-7.offset-lg-1
+                     .hero--copy
+                        h1 
+                           b Framing requirements as hypothesis
+
+                        h3 There’s some UX in your PM
+
+
+                  .col-lg-4.hero--pic
+                     picture 
+                        source(srcset="img/Desktop/Proyectos/CardProyecto-01.webp" type="image/webp")
+                        img.img-fluid(src="img/Desktop/Proyectos/CardProyecto-01.jpg" alt="Gayosso")
+
+
+         section.content
+            .container 
+               .row 
+                  .col-lg-3#col-nav
+                     .content--nav 
+                        h4 
+                           b Framing requirements as hypothesis
+
+                        .swiper#swiper_nav
+                           .swiper-wrapper
+                              .swiper-slide
+                                 h5#li-cero The project
+
+                              .swiper-slide
+                                 h5#li-uno 01.  Benchmark Research
+
+                              .swiper-slide
+                                 h5#li-dos 02. Service Blueprint
+
+                              .swiper-slide
+                                 h5#li-tres 03.  Facilitation
+
+                              .swiper-slide
+                                 h5#li-cuatro 04. Conclusion
+
+
+                  .col-lg-9
+                     .content__00.content__03.d-flex#cero
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Company-icon.svg" alt="Gayosso")
+                           h6 Company
+                              span TalentGuard
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Industry-icon.svg" alt="Gayosso")
+                           h6 industry
+                              span Human Resources - IT
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Design-icon.svg" alt="Gayosso")
+                           h6 Overall Design Maturity
+                              span Developer-Centered User Experience. 
+                                 a(href="https://www.nngroup.com/articles/ux-maturity-model/" target="_blank" rel="noopener noreferrer")  Learn more
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Duration-icon.svg" alt="Gayosso")
+                           h6 Duration
+                              span 2 months
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Teams-icon.svg" alt="Gayosso")
+                           h6 Teams Involved
+                              span Executives, Customer Success, Implementation, UX Design, Development, QA Testing
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Role-icon.svg" alt="Gayosso")
+                           h6 ROLE PLAYED
+                              span Benchmark Research, Service Blueprint creation, Workshop Facilitation
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Project-icon.svg" alt="Gayosso")
+                           h6 Project
+                              span Performance Management Enhancements
+
+                     .content__01 
+                        .col-12
+                           h4.text-decorated Background
+
+                        .row.content__01__parrafo
+                           .col-lg-5
+                              p 
+                                 b TalentGuard is an established startup that provides HR software solutions focused on talent retaining, succession planning and career development; their management suite has become one of the top 10 tech tools leading systems in the industry.
+
+                           .col-lg-7
+                              p The original multi-product SaaS suite was built from a developer centric perspective without user experience in mind. In addition to the limited time and budget, the inefficient usability and confusing information architecture was the main UX challenge.
+
+                              p In preparation for the core module usability enhancements, we’ve conducted a series of research studies and workshops with 5 customer support specialists, 3 developers and 3 designers. Our goal was to understand the urgency and complexity of the features that needed to speed up and enrich the interaction.
+
+                     .content__02
+                        .col-12
+                           h4.text-decorated Challenge
+
+                        .row.content__01__parrafo
+                           .col-lg-7
+                              p As a starting point the Design team got a list of concerns provided by the Product Owner and the results from an analysis conducted by the Testing Automation team.
+
+                              p In the past, the organization used a scrummerfall type of structure where the Product Manager would capture the initial requirements to be passed over to the Design team in the shape of user stories, creating a filter between designers and user needs.
+
+                              p The sudden absence of a Product Manager (our collaborator resigned) opened the door for the Design team to intervene at an earlier stage, reframing the stakeholders requirements as hypothesis, and conducting initial studies to understand, continue or re-formulate those premises. The deliverables included the documentation of flows, patterns, challenges and strategies users would take to navigate the module.
+
+                           .col-lg-5 
+                              p  
+                                 b The product life cycle was an additional consideration, as the full module was on its way to be redesigned. Therefore, we considered these enhancements as part of a transitional phase, while the full re-architecture was complete.
+
+                              p
+                                 b In addition, this project took place during the COVID-19 stricken world and economy of 2020.
+
+                           .col-12 
+                              h5.text-color 
+                                 b Even in the aggressive startup environment, our typical situation never stacked up a pandemic, a fully remote work model and a resignation of the Product Manager.
+
+                                 br 
+                                 b However, the complexity brought the opportunity to execute new practices guided by Design; emerging an inherently soft power promoted by the use of remote inclusive workshops that were elective in participation and turn the digitally-mediated voices equal.
+
+                     .content__03#uno
+                        h2.title-big 01.
+                           span Benchmark 
+                              br
+                              | Research
+
+                        .row
+                           .col-12.content__03__fila
+                              h4.text-decorated Contextual Inquiry
+                              p To understand and define the current flow we conducted a series of interviews with users and representatives from Customer Success, Implementation and Development. They guided us through the process, exposing the interaction behaviors and workflows for the employee, manager and administrator.
+
+                           .col-12.content__03__fila
+                              h4.text-decorated Additional Research
+                              p In order to clarify the jobs-to-be-done, we also studied other systems processes (flow diagrams) to elucidate differences in the approach, steps, ownership and interactions.
+
+                              p This research also helped analyze and dismantle the solutions provided during the contextual inquiry phase.
+
+                           .col-12.content__03__fila
+                              h4.text-decorated Research Findings
+                              p We found that the current architecture was usable and satisfied the existing system library. However, the logic and functionality of the componentry did not display the afforded interaction in ways that represent opportunity and guidance to the user; therefore, the experience was compromised by multiple frictions, being the navigation between touchpoints one of main points of concern.
+                              p The front-end layer was tightly coupled with the back-end architecture; any change to the look and feel of affordances should be considered as a medium to high development and testing effort.
+                              p Given that this was the core module where the full suite relied, applying major changes on the flow should be considered as a complex and risky development designation, and probably an extensive testing assignment.
+
+                        .row
+                           .col-lg-5
+                              p The administrator’s experience had a significant potential for improvement; however this flow was mainly unseen by the user since the Implementation team was in charge to set up the module for each company.
+                              p The findings helped identify the actionable areas.
+
+                           .col-lg-7
+                              picture 
+                                 source(srcset="img/Articulo1/01.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/Articulo1/01.jpeg")
+
+                     .content__03#dos
+                        h2.title-big 02.
+                           span Service 
+                              br 
+                              | Blueprint
+
+                        .row
+                           .col-12.content__03__fila
+                              p Mapping the current process helped us to get a comprehensive understanding of the user’s experiences with the module across all touchpoints, and to highlight the underlying processes – seen and unseen by the user– to make this possible.
+                              p This map was our main collaborative tool to communicate and create a shared understanding of the current challenges, align our scope, define goals and prioritize areas for improvement.
+
+                           .col-12.content__03__fila
+                              picture
+                                 source(srcset="img/Articulo1/02.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/Articulo1/02.jpeg")
+
+                     .content__03#tres
+                        h2.title-big 03.
+                           span Facilitation
+
+                        .row
+
+                           .col-lg-7
+                              picture 
+                                 source(srcset="img/Articulo1/03.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/Articulo1/03.jpeg")
+
+                           .col-lg-5
+                              p Miro is the Design team’s main collaboration tool. We used it to run the remote workshops due to its great features, but also because some of our teammates are already familiarized to it.
+                              p As a regular practice, for sessions with non-designers we send in advance the how to use videos, and schedule 5 to 10 minutes at the beginning of the session for a short explanation of the main tools. We also use icebreakers for the participants to interact with the app in a safe and joyful environment.
+
+                           .col-12.content__03__fila
+                              p To elucidate the approach we would take, while enabling an aligned progress, we shaped two intensive collaborative workshops focused on the employee flow and the overlapping experience for the manager. 
+                              p 1. Customer Success and Implementation: Prioritization of issues
+
+                              p Participants exposed the most severe customer issues to their knowledge.
+
+                              p 2. Development: Build empathy for the user, evaluate risk/effort and broaden the perspective beyond the design team
+
+                              p With a shared understanding of the user needs, the participants ideated high-level solutions keeping in mind the timeframe, risks and complexity of the system.
+
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated Customer Success - Prioritization and Implementation: Prioritization of issues
+
+                           .col-lg-6
+                              h5 Purpose:
+                              p Build consensus on the issues impacting the module users, according to Customer Success and Implementation teams. Use the results to inform and balance the project roadmap.
+
+                              h5 Scope:
+                              p Severity/impact on users' ability to successfully complete a task and range/number of affected users.
+
+                              h5 Length:
+                              p 1.5 hours in one session.
+
+                           .col-lg-6
+                              h5 Preparation:
+                              ul 
+                                 li The materials used were the Service Blueprint, Kanban board and icebreakers (memes).
+                                 li The Design team attended as facilitators.
+
+                              h5 Structure:
+                              p Remote synchronous workshop using online resources.
+                              ul 
+                                 li Getting used to Miro + icebreaker (15 min).
+                                 li Walkthrough of the Service Blueprint + timed voting per touchpoint (40 min).
+                                 li Frustration prioritization on a Kanban board, framing selected themes as a semantic-differential question (25 min).
+                                 li Wrap-up and follow-up (10 min).
+
+
+                        .row.content__03__fila
+                           .col-12
+                              picture
+                                 source(srcset="img/Articulo1/04.webp" type="image/webp")
+                                 img.img-fluid.d-block.m-auto(srcset="img/Articulo1/04.jpeg")
+
+                              picture
+                                 source(srcset="img/Articulo1/05.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-4.mb-4(srcset="img/Articulo1/05.jpeg")
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated Development: Build empathy for the user, evaluate risk/effort and broaden the perspective beyond the design team
+
+                           .col-lg-6
+                              h5 Purpose:
+                              ul 
+                                 li Communicate the priorities demarcated by Customer Success.
+                                 li Create consensus on the risks and effort required to tackle each theme.
+                                 li Ideating high-level solutions, considering the complexity of the back-end architecture and underlying legacy systems.
+
+                              h5 Scope:
+                              p Overall risk/effort on the issues prioritized by Customer Success, and high-level solutions to be framed later (not on this workshop) as a design challenge
+
+                              h5 Preparation:
+                              ul 
+                                 li The materials used were the Service Blueprint, Kanban board and brainstorm/affinity diagram boards from Customer Success workshop, icebreakers (memes).
+                                 li The Design team attended as facilitators and active participants.
+
+                           .col-lg-6
+                              h5 Structure:
+                              p Remote synchronous workshop using online resources.
+
+                              h5 Session one:
+                              p Empathy (60 min).
+
+                              ul 
+                                 li Getting used to Miro + icebreaker (15 min).
+                                 li Walkthrough of the Service Blueprint (30 min).
+                                 li Explanation of the results from the frustration prioritization workshop using the Kanban board (10 min).
+                                 li Wrap-up and follow-up (5 min).
+
+                        .row.content__03__fila
+                           .col-12
+                              picture
+                                 source(srcset="img/Articulo1/06.webp" type="image/webp")
+                                 img.img-fluid.d-block.m-auto(srcset="img/Articulo1/06.jpeg")
+
+                              picture
+                                 source(srcset="img/Articulo1/07.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-4.mb-4(srcset="img/Articulo1/07.jpeg")
+
+                        .row.content__03__fila
+                           .col-lg-5
+                              h5 Session two:
+                              p Ideation + Risk Discovery (90 min).
+                              ul 
+                                 li Recap on where we left off (10 min).
+                                 li Ideation of abstract solutions framing the most important pain-point themes as "How Might We" questions. Individual activity for developers and designers (25 min).
+                                 li Organization of solutions for each question, utilizing affinity diagramming. Prioritization by least amount of effort using a timed 3-dot voting process (20 min).
+                                 li Break (10 min).
+                                 li Initial assumptions of potential risks for each top voted idea. Individual activity for developers and designers. (20 min).
+                                 li Wrap-up and follow-up (5 min).
+
+                           .col-lg-7
+                              picture
+                                 source(srcset="img/Articulo1/08.webp" type="image/webp")
+                                 img.img-fluid.d-block.m-auto(srcset="img/Articulo1/08.jpeg")
+
+                        .row.content__03__fila
+                           .col-lg-7#col-img9
+                              picture
+                                 source(srcset="img/Articulo1/09.webp" type="image/webp")
+                                 img.img-fluid.d-block.m-auto(srcset="img/Articulo1/09.jpeg")
+
+                           .col-lg-5#col-three
+                              h5 Session three:
+                              p Next steps (60 min).
+                              ul 
+                                 li Recap on where we left off (10 min).
+                                 li Effort/Impact mapping of top voted ideas from the previous session. Activity for developers only (20 min).
+                                 li Description of three action steps for testing the solutions in less than 2 weeks, on a low-to-high effort hierarchy. Activity for developers and designers (20 min).
+                                 li Wrap-up and follow-up (10 min).
+
+                           .col-12#col-img10
+                              picture
+                                 source(srcset="img/Articulo1/10.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-5.mb-3(srcset="img/Articulo1/10.jpeg")
+
+                        .row.content__03__fila
+                           .col-lg-6
+                              h4.text-decorated Actionable items = hypothesis
+                              p Guided by the results of the workshops we visualized the actionable items and future PBIs in 4 groups, from high impact - low effort, to low impact - low effort.
+                              p The actions considered as low effort, in disregard of the impact, were straight forwarded for an evolving prototype test, since the solution was already set. While the tasks contemplated as high effort, both with a low or high impact, were considered as the next questions to be solved in a Design Sprint.
+
+                           .col-lg-6#col-img11
+                              picture
+                                 source(srcset="img/Articulo1/11.webp" type="image/webp")
+                                 img.img-fluid.d-block.m-auto(srcset="img/Articulo1/11.jpeg")
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated Closure
+                              p With a high level of confidence, the outcomes were used to populate the Roadmap as themes or subthemes, detailing the owners and timeframe with more precision than ever before.
+                              p This also allowed us to plan additional tasks not previously done by the Design team, as the PBI - use cases writing, internal training and product release planning.
+
+                     .content__03.content__04#cuatro
+                        .row
+                           .col-12.content__03__fila
+                              h2.title-big 04.
+                                 span Conclusion
+
+                        .row.content__03__fila
+                           .col-lg-6 
+                              p The uncertainty of the entire design process is generally viewed with mistrust by executives not used to generative processes, where the result is formulated episodically and therefore, takes time. However, elucidating the final design not as the invention of a single creative head, or as the sole mandate of the stronger voice in the room, fueled trust in processes and protocols.
+
+                              p These scaffolded online modes-of-inquiry can be repeated and standardized (up to a certain point) and inevitably question the organization’s underlying power arrangements, fostering in exchange, a smooth transition towards collaborative generation of solutions.
+
+                              p Furthermore, confidence in the process itself allowed us to resolve prejudices against emerging methodologies and even negative attitudes towards the design team.
+
+                           .col-lg-6 
+                              p As a Design manager, I identified 4 fundamental practices:
+                              p Design decision frameworks accelerates the understanding of the impact, information required, complexity and reversibility of the challenge.
+                                 br 
+                                 | Team operation under a voted-based protocol is substantial to move forward with proposals that require quick unanimous consent.
+                                 br 
+                                 | Trust and support balances the capacity of the team, allowing the more experienced individual to take the reins at certain times (for example, facilitating a workshop or answering specific questions), while leaving room for intervention and learning from other team members.
+                                 br
+                                 | Promoting confidence in the process rather than in our personal background, removes the emotional distress that is entailed by working with ambiguity; it also helps to overcome frustration, shame and guilt that can appear while pushing design practices in a low UX maturity organization.
+
+                        .row.content__03__logos.align-items-center
+                           .col-lg-3
+                              picture
+                                 source(srcset="img/Articulo1/12.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/Articulo1/12.png")
+
+                           .col-lg-8
+                              p The relevance of the project moved us to submit it as a case study for the ACM CHI Conference 2021.
+
+                        .row.content__04__other
+
+                           h4 Other projects
+
+                           .row
+                              .col-12.d-flex.work__row
+                                 a(href="project_two.html") 
+                                    .work__card 
+                                       picture 
+                                          source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.webp" type="image/webp")
+                                          source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-02.jpg")
+                                          source(srcset="img/Desktop/Proyectos/CardProyecto-02.webp" type="image/webp")
+                                          img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-02.jpg")
+
+                                       .work__card__copy 
+                                          h4 
+                                             b Design Sprints for long projects
+
+                                          h6 Internal collaboration through workshops
+
+                                 a(href="project_three.html") 
+                                    .work__card 
+                                       picture 
+                                          source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.webp" type="image/webp")
+                                          source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.jpg")
+                                          source(srcset="img/Desktop/Proyectos/CardProyecto-03.webp" type="image/webp")
+                                          img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-03.jpg")
+
+                                       .work__card__copy 
+                                          h4 
+                                             b Service Design and Digital Transformation
+
+                                          h6 Closing the gaps on a strict corporate environment
+
+         include includes/footer.pug

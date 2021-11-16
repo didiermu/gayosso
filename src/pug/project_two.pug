@@ -1,0 +1,490 @@
+-titulo =  "Sonia Gayosso"
+
+doctype
+html(lang='es')
+   include includes/head.pug
+
+   body
+      include includes/header.pug
+
+      main.projects#projects_two
+
+         section.hero 
+            include includes/sidebar.pug
+
+            .container 
+               .row 
+                  .col-lg-7.offset-lg-1
+                     .hero--copy
+                        h1 
+                           b Design Sprints for long projects
+
+                        h3 There’s some UX in your PM
+
+
+                  .col-lg-4.hero--pic
+                     picture 
+                        source(srcset="img/Desktop/Proyectos/CardProyecto-03.webp" type="image/webp")
+                        img.img-fluid(src="img/Desktop/Proyectos/CardProyecto-03.jpg" alt="Gayosso")
+
+
+         section.content
+            .container 
+               .row 
+                  .col-lg-3#col-nav
+                     .content--nav 
+                        h4 
+                           b Framing requirements as hypothesis
+
+                        .swiper#swiper_nav
+                           .swiper-wrapper
+                              .swiper-slide
+                                 h5#li-cero The project
+
+                              .swiper-slide
+                                 h5#li-uno 01.  UX Research
+
+                              .swiper-slide
+                                 h5#li-dos 02.  Customer Journey
+
+                              .swiper-slide
+                                 h5#li-tres 03.  Scenarios and Personas
+
+                              .swiper-slide
+                                 h5#li-cuatro 04.  Scenarios and Personas
+
+                              .swiper-slide
+                                 h5#li-cinco 05. Conclusion
+
+
+                  .col-lg-9
+                     .content__00.content__03.d-flex#cero
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Company-icon.svg" alt="Gayosso")
+                           h6 Company
+                              span TalentGuard
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Industry-icon.svg" alt="Gayosso")
+                           h6 industry
+                              span Human Resources - IT
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Design-icon.svg" alt="Gayosso")
+                           h6 Overall Design Maturity
+                              span Dedicated UX Budget. 
+                                 a(href="https://www.nngroup.com/articles/ux-maturity-stages-1-4/" target="_blank" rel="noopener noreferrer")  Learn more
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Duration-icon.svg" alt="Gayosso")
+                           h6 Duration
+                              span 12 months
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Teams-icon.svg" alt="Gayosso")
+                           h6 Teams Involved
+                              span Executives, Customer Success, Implementation, Marketing, UX Design, Development, QA Testing
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Role-icon.svg" alt="Gayosso")
+                           h6 ROLE PLAYED
+                              span UX Research, Customer Journey, Scenarios and Personas, Workshop Facilitation, Prototyping, Usability Testing
+
+                        .content__00__item.d-flex
+                           img.img-fluid(src="img/Icons/Project-icon.svg" alt="Gayosso")
+                           h6 Project
+                              span Succession Planning Redesign
+
+                     .content__01 
+                        .col-12
+                           h4.text-decorated Background
+
+                        .row.content__01__parrafo
+                           .col-lg-5
+                              p 
+                                 b TalentGuard is an established startup that provides HR software solutions focused on talent retaining, succession planning and career development; their management suite has become one of the top 10 tech tools leading systems in the industry.
+
+                           .col-lg-7
+                              p Our team was commissioned to redesign the Succession module, a complex large-scale system already in the market, but not used due to severe usability and technical issues.
+
+                              p The project had many phases and differente actors, including 3 experts, 3 executives, 2 customer support specialists, 1 marketing professional, 1 product manager, 5 developers and 4 designers.
+
+                     .content__02
+                        .col-12
+                           h4.text-decorated Challenge
+
+                        .row.content__01__parrafo
+                           .col-lg-7
+                              p With the insights from our research process, the artifacts developed during the discovery phase, and a better understanding of the scope and timeframe, the Design and Product team considered a staged release.
+
+                              p The releases were structured in 3 main phases, each one should not only add value but consolidate a cohesive experience.
+
+                              p Although this project was the priority in terms of new features, the maintenance work was kept in parallel, therefore the project management required an additional layer of exactitude to deliver on time (contractual requirement), and to keep alignment on the goals within the team.
+
+                              p Since we wanted to solve very different issues in a fast and open collaborative way, we chose Design Sprints as our methodology; although was not unfamiliar, this was the first time we were implementing it with the team and our Product Manager was quite hesitant.
+
+                              p In addition, a crisis with one of the clients demanded our full attention, requiring to pivot our efforts and frame of mind towards this crisis management.
+
+                           .col-lg-5 
+                              p  
+                                 b After a month and a half, a trip to the client site to do contextual inquiry, and a new features impacting the whole system, we went back to finish the Succession module.
+
+                              p
+                                 b As final point of contention, the product was released in the middle of the COVID-19 collapse, giving the Design and Product team very little time to test and adapt to the new challenges and the companies are facing.
+
+                           .col-12 
+                              h5.text-color 
+                                 b The Design Sprint allowed our team an intensive collaboration with Product Management, and as UX Manager, gave me a clearer understanding of the fears around uncertainty, inadequacy and misalignment with the executive board.
+
+                                 br
+                                 b The overall process facilitated the idea of ambiguity as a creative and healthy entity, and at the same time, generated trust in the Design Team between direct participants and stakeholders across the company.
+
+                                 br
+                                 b The hard lesson was to find the executives buy-in didn’t come from the renewed collaboration and inclusivity across departments, but from the project’s overall cost reduction, speed-up of shorter manageable stages, value and performance improvement.
+
+                     .content__03#uno
+                        h2.title-big 01.
+                           span UX
+                              br
+                              | Research
+
+                        .row
+                           .col-12.content__03__fila
+                              h4.text-decorated Expert interviews
+                              p The first step was to conduct a series of interviews with renowned external experts, TalentGuard’s executives, champion clients and end-users, to identify the dominant stories, elucidate connections and transitioning flows.
+
+                              p This information easily lead to document complex scenarios, but we had to trade-off with not extensively detailed personas.
+
+                              p The insights from industry experts accelerated our understanding of the perceived jobs-to-be-done and their mental model.
+
+                              p Giving us enough time to prepare subsequent interviews, identifying the unknowns and recalibrating our assumptions.
+
+                              picture 
+                                 source(srcset="img/Articulo2/01.webp" type="image/webp")
+                                 img.img-fluid.mt-3.mb-4(srcset="img/Articulo2/01.jpeg")
+
+                           .col-12.content__03__fila
+                              h4.text-decorated Additional Research
+                              p To get additional clarification and comparison on the different approaches to the jobs-to-be-done, we analysed reports, case studies and trends known in the industry.
+
+                              picture 
+                                 source(srcset="img/Articulo2/02.webp" type="image/webp")
+                                 img.img-fluid.m-5(srcset="img/Articulo2/02.jpeg")
+
+                           .col-12.content__03__fila
+                              h4.text-decorated Research Findings
+                              p The biggest problems the users mentioned were about executive alignment, organizational communication and emotions management.
+
+                              p We found 4 typical approaches to Succession planning, which influenced the scenarios and personas.
+
+                              p The main concern we heard was the negative impact automation can bring to an already disruptive process as Succession.
+
+                              picture 
+                                 source(srcset="img/Articulo2/03.webp" type="image/webp")
+                                 img.img-fluid.mt-3.mb-4(srcset="img/Articulo2/03.jpeg")
+
+                     .content__03#dos
+                        h2.title-big 02.
+                           span Customer 
+                              br 
+                              | Journey
+
+                        .row
+
+                           .col-lg-5
+                              p As an organization, TalenGuard user experience and design process was guided by a developer-centered view, relying in the engineer’s ability to solve problems while letting some of the front-end decisions to an UX engineer, without user research.
+
+                              p This approach led to poor design decisions and slowly opened the door for the Design team to prove what constitutes good usability.
+
+                           .col-lg-7
+                              picture 
+                                 source(srcset="img/Articulo2/04.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/Articulo2/04.jpeg")
+
+                           .col-12 
+                              p In this environment where design has to gain credibility through consistent results, a Customer Journey seemed to be a golden opportunity.
+
+                           .col-lg-6
+                              h5 As an artifact, the Journey map goals were:
+                              ul 
+                                 li Generate broad step-by-step process of Succession Planning
+                                 li Identify pain points
+                                 li Identify conflicting data
+                                 li Identify Thoughts+Feelings as associated with user Actions
+                                 li Identify where TalentGuard’s suite could facilitate the Succession process
+
+                           .col-lg-6
+                              h5 As an intervention, our objectives included:
+                              ul 
+                                 li Demonstrate Design is the rendering of intent and direction, not of the existing componentry.
+                                 li Journey maps help with understanding users’ problems and the value the product brings.
+                                 li Communicate the knowledge of our users’ problems to get a shared understanding within the organization, and guide decision-making.
+
+                           .col-12 
+                              picture 
+                                 source(srcset="img/Articulo2/05.webp" type="image/webp")
+                                 img.img-fluid.m-4(srcset="img/Articulo2/05.jpeg")
+
+                              p By showing the broad process of Succession Planning (everything above the dashed line), in comparison to the areas where the system was currently supporting those actions (everything below the dashed line), exposed the opportunity to support criteria and definitions to align the system to our users’ needs and values.
+
+                     .content__03#tres
+                        h2.title-big 03.
+                           span Scenarios and 
+                              br 
+                              | Personas
+
+                        .row.content__03__fila
+
+                           .col-lg-5
+                              p As stated before, the process helped us define the use cases among 3 main user roles: administrator (often also a HR business partner), talent pool owner (normally a manager), employee.
+
+                              p We found these personas could have different feelings and behaviors according to the 4 approaches / maturity levels of Succession Planning each company could set in place.
+
+                              p Therefore, we defined our design objectives to support and guide the user tasks around those 4 ecosystems.
+
+
+
+                           .col-lg-7
+                              picture 
+                                 source(srcset="img/Articulo2/06.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/Articulo2/06.jpeg")
+
+                     .content__03#cuatro
+                        h2.title-big 04.
+                           span Design Sprint: Facilitation,
+                              br 
+                              | Prototyping and Testing
+
+
+                        .row.content__03__fila
+
+                           .col-lg-7
+                              picture
+                                 source(srcset="img/Articulo2/07.webp" type="image/webp")
+                                 img.img-fluid.d-block.m-auto(srcset="img/Articulo2/07.jpeg")
+
+                           .col-lg-5 
+                              p Due to the COVID-19 pandemic, half the project was done remotely.
+                              p Miro was already the Design team’s main collaboration tool, so we used it to run the online workshops.
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated.mt-3.mb-4 Sprint 0: Strategy, alignment, roadmapping
+
+                           .col-lg-6
+                              h5 Purpose:
+                              p Strategy and alignment sprint, to generate the main objective, project scope and roadmap (this was the first roadmap based in outcomes rather than features).
+
+                              h5 Challenge:
+                              p Generate a roadmap that allow us complete the full Succession redesign in the estimated time (originally 6 months).
+
+                              h5 Behaviors to encourage:
+                              p Cross-departmental collaboration, active participation.
+
+                           .col-lg-6
+                              h5 Risks to avoid: 
+                              p Stakeholders’ disruptive interventions, water flow processes.
+
+                              h5 Success metrics:
+                              p Google Heart Framework
+
+                              h5 Focus on:
+                              p Assumptions and future sprint questions.
+
+                           .col-12 
+                              picture
+                                 source(srcset="img/Articulo2/08.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/08.jpeg")
+
+                              picture
+                                 source(srcset="img/Articulo2/09.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-2(srcset="img/Articulo2/09.jpeg")
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated.mt-3.mb-4 Sprint 1: Administrator’s Set-up / Talent Pool Owner Experience
+
+                           .col-lg-6
+                              h5 Purpose:
+                              p Create the full set-up flow for administrators, and the front experience for talent pool owners (administrators and managers).
+                              h5 Challenge:
+                              p Implement a simple, guided and transparent experience, while making our users feel comfortable analyzing confidential information for succession purposes.
+                              h5 Behaviors to encourage:
+                              p Reliability and honesty.
+
+                           .col-lg-6
+                              h5 Risks to avoid: 
+                              p Bias and favoritism.
+                              h5 Success metrics:
+                              p Adoption and retention.
+                              h5 Focus on:
+                              p Utilization of well known industry standards.
+
+                           .col-12 
+                              picture
+                                 source(srcset="img/Articulo2/10.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/10.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/11.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/11.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/12.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/12.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/13.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/13.jpeg")
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated.mt-3.mb-4 Sprint 2: Talent Plan for Employees and Managers
+
+                           .col-lg-6
+                              h5 Purpose:
+                              p Enhance the areas in the system where the employees can update their information and decide if they want to make it visible for managers and administrators in order to be considered in a succession planning initiative.
+
+                              h5 Challenge:
+                              p Strengthen the current features to allow the employees self-advocate for their own career ambitions, and a transparent unbiased easy decision making for managers.
+
+                              h5 Behaviors to encourage:
+                              p Eagerness to keep the relevant information up-to-date.
+
+                           .col-lg-6
+                              h5 Risks to avoid: 
+                              p Rigid and competitive environment.
+
+                              h5 Success metrics:
+                              p Engagement, adoption and retention.
+
+                              h5 Focus on:
+                              p Existing functionality and project scope.
+
+                           .col-12 
+                              picture
+                                 source(srcset="img/Articulo2/14.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/14.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/15.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/15.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/16.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/16.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/17.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/17.jpeg")
+
+                        .row.content__03__fila
+                           .col-12
+                              h4.text-decorated.mt-3.mb-4 Sprint 3: Automated Recommendations based on an Ideal Candidate, and Notification System
+
+                           .col-lg-6
+                              h5 Purpose:
+                              p Create an accurate and reliable recommendations experience, based on an unbiased and easy to set ideal candidate, that saves time for managers and administrators in charge of the Succession Planning.
+
+                              h5 Challenge:
+                              p Generate a recommendation flow, easy to understand, trust and follow, that allows the managers to add people across the company, without breaking confidentiality restrictions.
+
+                              h5 Behaviors to encourage:
+                              p Respect, impartiality, recognition.
+
+                           .col-lg-6
+                              h5 Risks to avoid: 
+                              p Unpredictability, hesitation, disruption.
+
+                              h5 Success metrics:
+                              p Happiness, Engagement.
+
+                              h5 Focus on:
+                              p Integration with existing functionality, privacy breaches.
+
+                           .col-12 
+                              picture
+                                 source(srcset="img/Articulo2/18.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/18.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/19.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/19.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/20.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/20.jpeg")
+                              picture
+                                 source(srcset="img/Articulo2/21.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/21.jpeg")
+
+                        .row.content__03__fila
+
+                           .col-lg-5
+                              h4.text-decorated.mt-3.mb-4 Closure
+                              p As part of an Early Access phase, the Design team prepared a benchmark research to start measuring the overall experience.
+
+                              p A quantitative usability test was run, including the metrics planned to be collected over the next years. Unfortunately, the COVID-19 crisis is a confounding factor that might invalidate the results, however is early to consider the results as unreliable.
+
+                           .col-lg-7 
+                              picture
+                                 source(srcset="img/Articulo2/22.webp" type="image/webp")
+                                 img.img-fluid.d-block.mt-3.mb-4(srcset="img/Articulo2/22.jpeg")
+
+
+                     .content__03.content__04#cinco
+                        .row
+                           .col-12.content__03__fila
+                              h2.title-big 05.
+                                 span Conclusion
+
+                        .row.content__03__fila
+                           .col-lg-6 
+                              p Thinking about the Design Sprint as a toolkit benefits beyond getting results in a short period of time, my learnings as a Design manager include the following:
+
+                              ul 
+                                 li UX Research is not replaceable, is essential to answer the Whys behind the project.
+                                 li Even with a good research, never skip the lightning talks from day 1, as those will help framing the challenge, the Whats and the Whos. In addition, even if all the experts cannot stay in the workshop, they will feel appreciated and heard.
+                                 li The Design Sprint should be planned at least one week in advance (two is ideal), to give the attenders enough time to block their calendars. Multiple times we found the executives are not the busiest participants.
+                                 li The project’s first sprint requires extra planification and dynamism. Jared Spool compares it to an ignition system, the first push to break the inertia.
+
+
+                           .col-lg-6 
+                              ul 
+                                 li For optimal results, each workshop requires at least one facilitator and one partner. It might be done by one single person but could be incredible hard and tiring.
+                                 li During the Sprint reading the room’s mood is essential, but is also important to watch out for derailers outside the workshop.
+
+                              p Design Sprints remind us that good design is a participatory practice, where multiple results can be found, tested and compared.
+
+                              p And while as official designers we do not know everything, we can facilitate navigating through this ambiguous process and make the uncertainty a guiding play.
+
+                              p Success happens when we all embrace our unknowns and let the research guide the way.
+
+
+                        .row.content__04__other
+
+                           h4 Other projects
+
+                           .row
+                              .col-12.d-flex.work__row
+                                 a(href="project_one.html") 
+                                    .work__card 
+                                       picture 
+                                       source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.webp" type="image/webp")
+                                       source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-01.jpg")
+                                       source(srcset="img/Desktop/Proyectos/CardProyecto-01.webp" type="image/webp")
+                                       img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-01.jpg")
+
+                                       .work__card__copy 
+                                          h4 
+                                             b Framing requirements as hypothesis
+
+                                          h6 There’s some UX in your PM
+
+                                 a(href="project_three.html") 
+                                    .work__card 
+                                       picture 
+                                          source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.webp" type="image/webp")
+                                          source(media="(max-width: 992px)" srcset="img/Mobile/Proyectos/CardProyecto-03.jpg")
+                                          source(srcset="img/Desktop/Proyectos/CardProyecto-03.webp" type="image/webp")
+                                          img.img-fluid.img-fit(src="img/Desktop/Proyectos/CardProyecto-03.jpg")
+
+                                       .work__card__copy 
+                                          h4 
+                                             b Service Design and Digital Transformation
+
+                                          h6 Closing the gaps on a strict corporate environment
+
+         include includes/footer.pug

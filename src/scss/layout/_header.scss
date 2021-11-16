@@ -90,6 +90,7 @@
 							background: var(--purple_dos);
 							border-radius: 50%;
 							transition: .3s ease-in-out all;
+							z-index: -1;
 						}
 
 						@media (hover: hover) {
