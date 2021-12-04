@@ -69,13 +69,15 @@ function efectoFade() {
       } else {
         $(this).find($(".objetFade")).removeClass("transition1");
       }
-
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        $(".contact").find($(".objetFade")).addClass("transition1");
-      } else {
-        $(".contact").find($(".objetFade")).removeClass("transition1");
-      }
     });
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      $(".contact").find($(".objetFade")).addClass("transition1");
+      $(".sidebar").fadeOut();
+    } else {
+      $(".contact").find($(".objetFade")).removeClass("transition1");
+      $(".sidebar").fadeIn();
+    }
   }
 
   sectionFade();

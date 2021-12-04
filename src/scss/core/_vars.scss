@@ -41,7 +41,18 @@
     
     --paddingSection: 100px 0;
     
-    
+    @media (min-width:1280px) {
+        --h3:calc(30px + 10 * ((100vw - 1280px) / 1920)) !important; 
+    }
+
+
+    ///// MEDIA TABLET /////
+
+    @media (min-width:1024px) {
+        --h3:calc(25px + 5 * ((100vw - 992px) / 1280)); 
+    }
+
+
     ///// MEDIA MOBILE /////
 
     @media (max-width:992px) {

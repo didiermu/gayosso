@@ -138,7 +138,7 @@
 /// MOBILE
 @media (max-width:992px) {
 	.header {
-		padding: 0;
+		padding: 0 20px;
 		height: 72px;
 
 		
@@ -218,12 +218,11 @@
 					color: #fff;
 				}
 			}
-			
 		}
 
 		&--logo {	
 			img{
-				max-width: 110px;
+				max-width: 140px;
 			}
 		}
 
