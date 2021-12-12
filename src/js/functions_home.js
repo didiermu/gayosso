@@ -12,6 +12,7 @@ swiperInfo = () => {
     direction: "horizontal",
     allowTouchMove: false,
     effect: "fade",
+
     slidesPerView: 1,
   });
 
@@ -19,6 +20,7 @@ swiperInfo = () => {
     direction: "horizontal",
     allowTouchMove: false,
     loop: true,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -33,6 +35,7 @@ swiperInfo = () => {
         );
       },
     },
+    updateOnWindowResize: true,
 
     breakpoints: {
       320: {
@@ -112,11 +115,19 @@ swiperInfo = () => {
       }
     }
   });
+
+  // swiperContent.on("resize", function () {
+  //   console.log(swiperContent.activeIndex);
+  // });
 };
 
 $(function () {
   // swiperImage();
   if ($("main").hasClass("home")) {
     swiperInfo();
+
+    $(window).resize(function () {
+      swiperInfo();
+    });
   }
 });
