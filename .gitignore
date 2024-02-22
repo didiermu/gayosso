@@ -106,3 +106,5 @@ typings/
 src
 dist
 .DS_Store
+package.json
+*.vite
