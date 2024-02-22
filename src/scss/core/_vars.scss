@@ -1,70 +1,17 @@
-
 :root {
-    
-    // COLORS/////
+    --color-primario-01: #bb2649;
+    --color-secundario-01: #055864;
+    --color-secundario-02: #8DF2FD;
+    --color-gris-02: #304B5F;
+    --color-blanco-01: #fff;
+    --color-blanco-02: #f0f0f5;
+    --color-negro-01: #000;
 
-    --gris: #AFB7BF;
-    --gris_dark: #4F4F4F;
-    --gris_medium: #CCD5DD;
-    --gris_light: #F0F0F5;
-    --negro: #191921;
-    --negro_gray: #7E7E8E;
-    --blanco: #FFFFFF;
-    --purple: #CDCCFD;
-    --purple_dos: #9998EB;
-    --purple_tres: #7371C9;
-    --pink: #E998AA;
-    --pink_2: #DC6983;
-    --orange: #F3AD70;
-    --orange_dos:#FA9035;
-    --aqua: #6FD8D0;
+    --color-primario-opacity: rgba(187, 38, 73, 0.75);
+    --color-blanco-opacity: rgba(240, 240, 245, 0.75);
+    --font-primaria-regular: "Open Sans", sans-serif;
 
-    // FONTS /////
+    --spacing-ml: 2rem;
+    --spacing-md: 1.5rem;
 
-    // --primariaRegular:'ManropeRegular';
-    // --primariaSemibold:'Manrope-SemiBold';
-    // --primariaBold:'ManropeBold';
-
-    --primariaRegular:'Manrope', sans-serif;
-    --primariaSemibold:'Manrope', sans-serif;
-    --primariaBold:'Manrope', sans-serif;
-
-    --h1:calc(55px + 10 * ((100vw - 1280px) / 1920)); 
-    --h2:calc(47px + 10 * ((100vw - 1280px) / 1920)); 
-    --h3:calc(30px + 10 * ((100vw - 1280px) / 1920)); 
-    --h4:calc(23px + 10 * ((100vw - 1280px) / 1920)); 
-    --h5:calc(17px + 10 * ((100vw - 1280px) / 1920)); 
-    --h6:calc(15px + 10 * ((100vw - 1280px) / 1920));
-    --min:calc(12px + 10 * ((100vw - 1280px) / 1920));
-    
-    /// SECTIONS /////
-    
-    --paddingSection: 100px 0;
-    
-    @media (min-width:1280px) {
-        --h3:calc(30px + 10 * ((100vw - 1280px) / 1920)) !important; 
-    }
-
-
-    ///// MEDIA TABLET /////
-
-    @media (min-width:1024px) {
-        --h3:calc(25px + 5 * ((100vw - 992px) / 1280)); 
-    }
-
-
-    ///// MEDIA MOBILE /////
-
-    @media (max-width:992px) {
-        --h1:calc(32px + 10 * ((100vw - 320px) / 1280)); //
-        --h2:calc(24px + 10 * ((100vw - 320px) / 1280)); //
-        --h3:calc(20px + 10 * ((100vw - 320px) / 1280)); //
-        --h4:calc(16px + 10 * ((100vw - 320px) / 1280)); //
-        --h5:calc(14px + 10 * ((100vw - 320px) / 1280));
-        --h6:calc(12px + 10 * ((100vw - 320px) / 1280)); //
-
-        
-        --paddingSection: 40px 0px;
-    }
 }
-
