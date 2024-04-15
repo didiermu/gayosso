@@ -8,7 +8,7 @@ const revealLoad = (el, movimiento, delay = 0) => {
       {
          xPercent: 0,
          opacity: 1,
-         duration: 1.5,
+         duration: 1,
          delay: delay,
          ease: "ease",
       }

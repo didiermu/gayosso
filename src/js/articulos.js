@@ -8,7 +8,7 @@ const revealLoad = (el, movimiento, delay = 0) => {
       {
          xPercent: 0,
          opacity: 1,
-         duration: 1.5,
+         duration: 1,
          delay: delay,
          ease: "ease",
       }
@@ -32,8 +32,8 @@ const animacionYSlow = (el, trigger, movimiento = 40, delay = 0) => {
             delay: delay,
             scrollTrigger: {
                trigger: trigger,
-               start: "top center",
-               end: "top center",
+               start: "-=400 center",
+               end: "+=200 center",
                scrub: 5,
                toggleActions: "restart pause reverse pause",
             },

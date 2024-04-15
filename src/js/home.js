@@ -30,8 +30,8 @@ const animacionX = (el, trigger, movimiento) => {
          delay: 0,
          scrollTrigger: {
             trigger: trigger,
-            start: "top center",
-            end: "top center",
+            start: "-=400 center",
+            end: "+=200 center",
             scrub: 5,
             toggleActions: "restart pause reverse pause",
          },
@@ -56,8 +56,8 @@ const animacionYSlow = (el, trigger, movimiento = 40, delay = 0) => {
             delay: delay,
             scrollTrigger: {
                trigger: trigger,
-               start: "top center",
-               end: "top center",
+               start: "-=400 center",
+               end: "+=200 center",
                scrub: 5,
                toggleActions: "restart pause reverse pause",
             },
@@ -186,11 +186,14 @@ drawSvgServicios();
 
 //////////////////// PORTAFOLIO //////////////////
 
-const proyectos = () => {
-   const mediaQuery = window.matchMedia("(min-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width: 1279px)");
 
+const proyectos = () => {
    const cardUno = document
       .querySelector(".portafolio__card--uno")
+      .closest("a");
+   const cardTres = document
+      .querySelector(".portafolio__card--tres")
       .closest("a");
    const cardDos = document
       .querySelector(".portafolio__card--dos")
@@ -205,15 +208,20 @@ const proyectos = () => {
       .querySelector(".portafolio__card--seis")
       .closest("a");
 
-   mediaQuery.addListener(function (e) {
-      if (e.matches) {
-         cardUno.insertAdjacentElement("afterend", cardDos);
-         cardCuatro.insertAdjacentElement("afterend", cardCinco);
-         cardCinco.insertAdjacentElement("afterend", cardSeis);
-         console.log("p");
-      } else {
-      }
-   });
+   const colTres = document.querySelector("#col-tres");
+
+   if (mediaQuery.matches) {
+      cardUno.insertAdjacentElement("afterend", cardDos);
+      cardCuatro.insertAdjacentElement("afterend", cardCinco);
+      cardCinco.insertAdjacentElement("afterend", cardSeis);
+      console.log("m");
+   } else {
+      cardTres.insertAdjacentElement("afterend", cardDos);
+      colTres.insertAdjacentElement("afterbegin", cardCinco);
+      cardCinco.insertAdjacentElement("afterend", cardSeis);
+      console.log("d");
+   }
 };
 
+mediaQuery.addListener(proyectos);
 proyectos();
