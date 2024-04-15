@@ -1,13 +1,10 @@
 .header {
-    position: fixed;
-    padding: 16px 54px;
-    width: 100%;
+    position: sticky;
+    padding: 16px var(--spacing-2xl) 0;
     top: 0;
     align-items: center;
     z-index: 11;
     display: flex;
-    align-items: center;
-    transition: 0.3s ease-in-out all;
     background: var(--color-blanco-01);
 
     &--logos {
@@ -15,17 +12,7 @@
     }
 
     &--navegacion {
-        align-items: center;
-        justify-content: space-between;
-
-        nav {
-            width: 100%;
-        }
-
-        #navbarNav {
-            width: 100%;
-            justify-content: flex-end;
-        }
+        justify-content: flex-end;
 
         ul {
             padding: 0;
@@ -66,6 +53,7 @@
                     color: inherit;
                     text-decoration: none;
                     transition: 0.3s ease-in-out all;
+                    cursor: pointer;
                 }
             }
         }
@@ -74,10 +62,12 @@
 
 }
 
-@media (max-width: 1024px) {
+@media(width < 768px) {
     .header {
         height: auto;
         padding: 8px 16px;
+        position: relative !important;
+        width: auto !important;
 
         #li-contact {
             display: none;

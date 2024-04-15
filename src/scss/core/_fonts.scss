@@ -1,8 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
 @mixin font-regular {
     font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-secondary {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-terciary {
+    font-family: "Bitter", sans-serif;
     font-weight: 400;
 }
 
@@ -33,6 +43,26 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-avatar:before {
+    content: "\e906";
+    color: #f9f9fc;
+}
+
+.icon-icon-duration:before {
+    content: "\e907";
+    color: #f9f9fc;
+}
+
+.icon-icon-industry:before {
+    content: "\e908";
+    color: #f9f9fc;
+}
+
+.icon-icon-company:before {
+    content: "\e909";
+    color: #f9f9fc;
 }
 
 .icon-download-azul:before {

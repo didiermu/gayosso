@@ -2,6 +2,7 @@
     @include font-regular;
     color: var(--color-negro-01);
     background: var(--color-blanco-01);
+    overflow-x: hidden;
 
     h1,
     h2,
@@ -10,7 +11,8 @@
     h5,
     h6,
     p,
-    li {
+    li,
+    figure {
         margin: 0;
     }
 
@@ -24,12 +26,30 @@
         }
 
         @include media-breakpoint-up(xl) {
-            @include make-container(52px);
+            @include make-container(118px);
         }
 
         @include media-breakpoint-up(xxl) {
-            @include make-container(52px);
+            @include make-container(118px);
             // max-width: 1174px;
         }
+    }
+
+    &:has(.main-portafolio),
+    &:has(.main-articulo) {
+        .header {
+            position: fixed;
+            right: 0;
+            width: max-content;
+            background-color: rgba(255, 255, 255, .6);
+            backdrop-filter: blur(10px);
+        }
+
+        #li-portafolio {
+            &::after {
+                background: var(--color-primario-01);
+            }
+        }
+
     }
 }

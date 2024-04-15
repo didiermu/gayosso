@@ -60,3 +60,96 @@
     font-size: 0.875rem;
     line-height: 1rem;
 }
+
+
+
+// UTILS
+
+@mixin tag {
+    @include text-sm-14;
+    color: var(--color-primario-01);
+    padding: var(--spacing-xxs) var(--spacing-sm);
+    width: max-content;
+    border: 1px solid var(--color-primario-01);
+    transition: .3s ease-in-out;
+
+    &.tag-white {
+        border-color: var(--color-blanco-01);
+        color: var(--color-blanco-01);
+    }
+
+}
+
+@mixin otros {
+    padding: var(--spacing-6xl) 0;
+
+    h2 {
+        @include text-xl-56;
+        margin-bottom: var(--spacing-3xl);
+        font-weight: 100;
+    }
+
+
+    .col-lg-4 {
+        padding: 0;
+
+        &:nth-child(3n) {
+            a {
+                border-right: 0;
+            }
+        }
+
+        &:nth-child(n+4) {
+            a {
+                border-bottom: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            display: grid;
+            place-content: flex-start;
+            row-gap: var(--spacing-xxs);
+            background: var(--color-blanco-02);
+            padding: var(--spacing-lg) var(--spacing-4xl) var(--spacing-lg) var(--spacing-lg);
+            border: 1px solid #DADCDF;
+            border-width: 0 2px 2px 0;
+            transition: .3s ease-in-out;
+            height: 100%;
+
+            @media(hover:hover) {
+                &:hover {
+                    color: var(--color-blanco-01);
+                    background: var(--color-primario-opacity);
+
+                    .tag {
+                        background: none;
+                        border-color: var(--color-blanco-01);
+                        color: var(--color-blanco-01);
+                    }
+                }
+            }
+        }
+    }
+
+    .tag {
+
+        @include tag;
+    }
+
+    &__titulo {
+        @include text-md-24;
+        font-weight: 100;
+    }
+
+    &__body {
+        @include text-sm-18;
+        font-weight: 100;
+    }
+
+    @media(width < 768px) {
+        .col-lg-4 a {
+            border-width: 0 0 1px 0;
+        }
+    }
+}

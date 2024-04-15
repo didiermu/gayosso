@@ -13,37 +13,33 @@
          <div class="container-fluid">
             <div class="row header--row">
                <div class="col-lg-12 header--navegacion d-flex">
-                  <nav class="navbar-expand-lg">
-                     <div class="navbar-collapse" id="navbarNav">
-                        <ul class="header--one">
-                           <li id="li-about">
-                              <a href="#!">About</a>
-                           </li>
-                           <li id="li-portafolio">
-                              <a href="#!">Portafolio</a>
-                           </li>
-                           <li id="li-contact">
-                              <a href="#!">Contact</a>
-                           </li>
-                        </ul>
-                        <div class="header--logos">
-                           <a
-                              href="mailto:sonia.gayosso.s@gmail.com"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                           >
-                              <img src="img/icon-mail.svg" alt="" />
-                           </a>
-                           <a
-                              href="https://www.linkedin.com/in/soniagayossosanchez/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                           >
-                              <img src="img/icon-linkedin.svg" alt="" />
-                           </a>
-                        </div>
-                     </div>
-                  </nav>
+                  <ul class="header--one">
+                     <li id="li-about">
+                        <a>About</a>
+                     </li>
+                     <li id="li-portafolio">
+                        <a>Portafolio</a>
+                     </li>
+                     <li id="li-contact">
+                        <a>Contact</a>
+                     </li>
+                  </ul>
+                  <div class="header--logos">
+                     <a
+                        href="mailto:sonia.gayosso.s@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     >
+                        <img src="img/icon-mail.svg" alt="" />
+                     </a>
+                     <a
+                        href="https://www.linkedin.com/in/soniagayossosanchez/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     >
+                        <img src="img/icon-linkedin.svg" alt="" />
+                     </a>
+                  </div>
                </div>
             </div>
          </div>
@@ -53,7 +49,7 @@
          <section class="hero">
             <div class="custom-container">
                <video
-                  src="video/1084033837-preview.mp4"
+                  src="video/aves.mp4"
                   autoplay
                   loop
                   muted
@@ -63,14 +59,42 @@
                   <h1>Sonia Gayosso</h1>
                   <h2>UX Certified Specialist | Mentor</h2>
                </div>
-               <div class="hero--title offset-xl-1">
-                  <h2 class="hero--title--uno">
-                     <strong>Collective</strong> effort
-                  </h2>
-                  <h2 class="hero--title--dos">
-                     over individual
-                     <span>action</span>
-                  </h2>
+               <div class="hero--title offset-1">
+                  <div class="hero--title--uno--wrap">
+                     <img
+                        class="hero--title--uno"
+                        src="img/title-1.svg"
+                        alt=""
+                     />
+                     <svg
+                        width="1000"
+                        height="6"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <defs>
+                           <linearGradient id="grad1">
+                              <stop offset="0%" stop-color="red" />
+                              <stop
+                                 offset="100%"
+                                 stop-color="red"
+                                 stop-opacity="0"
+                              />
+                           </linearGradient>
+                        </defs>
+                        <path
+                           d="M  0  0 H 1000"
+                           stroke="#304B5F"
+                           stroke-width="7"
+                           id="pathNuestros"
+                        />
+                     </svg>
+                  </div>
+
+                  <img
+                     class="hero--title--dos"
+                     src="img/title-1-1.svg"
+                     alt=""
+                  />
                </div>
             </div>
          </section>
@@ -78,21 +102,21 @@
          <section class="resume" id="about">
             <div class="container-fluid">
                <div class="row">
-                  <div class="col-xl-4 col-6">
+                  <div class="offset-lg-1 col-lg-4 col-6">
                      <picture id="pic1">
                         <source
-                           media="(max-width: 768px)"
+                           media="(max-width: 767px)"
                            srcset="img/resume-1-mobile.jpg"
                         />
                         <img src="img/Subtract.png" alt="" />
                      </picture>
                   </div>
-                  <div class="col-xl-2 col-6">
+                  <div class="col-lg-2 col-6">
                      <picture id="pic2">
                         <img src="img/landscape.jpg" alt="" />
                      </picture>
                   </div>
-                  <div class="col-xl-4 col-12 resume--text">
+                  <div class="col-xl-4 col-lg-5 col-12 resume--text">
                      <h3>
                         I am driven to co-produce content that's not just
                         culturally aware and ethically sound, but also adaptable
@@ -101,90 +125,137 @@
                         transformation.
                      </h3>
                      <h4>My Career Journey and Credentials</h4>
-                     <button type="button">Resume</button>
+                     <a
+                        href="../img/CV-SoniaGayosso.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-decoration-none"
+                     >
+                        <button type="button">Resume</button>
+                     </a>
                   </div>
                </div>
             </div>
          </section>
 
          <section class="portafolio" id="portafolio">
-            <div class="video-container">
-               <video
-                  src="video/1025740823-preview.mp4"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-               ></video>
-            </div>
-            <div class="container-fluid">
-               <div class="portafolio--title">
-                  <img
-                     class="portafolio--title--uno"
-                     src="img/Portfolio-1.svg"
-                     alt=""
-                  />
-                  <img
-                     class="portafolio--title--dos"
-                     src="img/Portfolio-2.svg"
-                     alt=""
-                  />
-                  <img
-                     id="title-mobile"
-                     src="img/Portfolio-title-mobile.svg"
-                     alt=""
-                  />
-               </div>
-            </div>
-
             <div class="portafolio--contenedor container-fluid">
                <div class="row">
-                  <div class="col-xl-4 portafolio__col">
-                     <div class="portafolio__card portafolio__card--uno">
-                        <h4>Design Sprints for Long Projects</h4>
-                        <p>Redesign of a Lorem Ipsum etc dolor sit amet</p>
+                  <div class="col-xl-4 col-lg-6 portafolio__col" id="col1">
+                     <div class="portafolio--title">
+                        <img
+                           class="portafolio--title--uno"
+                           src="img/Portfolio-1.svg"
+                           alt=""
+                        />
+                        <img
+                           class="portafolio--title--dos"
+                           src="img/Portfolio-2.svg"
+                           alt=""
+                        />
+                        <img
+                           id="title-mobile"
+                           src="img/Portfolio-title-mobile.svg"
+                           alt=""
+                        />
+                     </div>
+                     <div class="video-container">
+                        <video
+                           src="video/oceano.mp4"
+                           autoplay
+                           loop
+                           muted
+                           playsinline
+                        ></video>
+                     </div>
+                     <div class="portafolio__card--wrap" id="col-uno">
+                        <a href="portafolio.html">
+                           <div class="portafolio__card portafolio__card--uno">
+                              <h5 class="tag">Use case</h5>
+                              <h4>Enhancing Career Growth</h4>
+                              <p>
+                                 Leveraging Six Sigma and Service Design
+                                 Methodologies
+                              </p>
+                           </div>
+                        </a>
                      </div>
                   </div>
-                  <div class="col-xl-4 portafolio__col">
-                     <div class="portafolio__card portafolio__card--dos">
-                        <h4>Title Lorem ipsum dolor sit amet</h4>
-                        <p>
-                           Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                           lorem ipsum
-                        </p>
+                  <div class="col-xl-4 col-lg-6 portafolio__col" id="col2">
+                     <div class="video-container">
+                        <video
+                           src="video/oceano.mp4"
+                           autoplay
+                           loop
+                           muted
+                           playsinline
+                        ></video>
                      </div>
+                     <div class="portafolio__card--wrap" id="col-dos">
+                        <a href="portafolio.html">
+                           <div class="portafolio__card portafolio__card--dos">
+                              <h5 class="tag">Use case</h5>
+                              <h4>Rethinking Performance Management</h4>
+                              <p>Shifting Requirements with Hypotheses</p>
+                           </div>
+                        </a>
 
-                     <div class="portafolio__card portafolio__card--tres">
-                        <h4>Title Lorem ipsum dolor sit amet</h4>
-                        <p>
-                           Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                           lorem ipsum
-                        </p>
-                     </div>
+                        <a href="portafolio.html">
+                           <div class="portafolio__card portafolio__card--tres">
+                              <h5 class="tag">Use case</h5>
+                              <h4>Unbiased Succession Planning</h4>
+                              <p>Design Sprints for Extended Projects</p>
+                           </div>
+                        </a>
 
-                     <div class="portafolio__card portafolio__card--cuatro">
-                        <h4>Title Lorem ipsum dolor sit amet</h4>
-                        <p>
-                           Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                           lorem ipsum
-                        </p>
+                        <a href="articulo.html">
+                           <div
+                              class="portafolio__card portafolio__card--cuatro"
+                           >
+                              <h5 class="tag">Article</h5>
+                              <h4>Apps on Foldable Devices</h4>
+                              <p>
+                                 Lorem ipsum dolor sit amet lorem ipsum dolor
+                                 sit amet lorem ipsum
+                              </p>
+                           </div>
+                        </a>
                      </div>
                   </div>
-                  <div class="col-xl-4 portafolio__col">
-                     <div class="portafolio__card portafolio__card--cinco">
-                        <h4>Title Lorem ipsum dolor sit amet</h4>
-                        <p>
-                           Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                           lorem ipsum
-                        </p>
+                  <div class="col-xl-4 portafolio__col" id="col3">
+                     <div class="video-container">
+                        <video
+                           src="video/oceano.mp4"
+                           autoplay
+                           loop
+                           muted
+                           playsinline
+                        ></video>
                      </div>
+                     <div class="portafolio__card--wrap" id="col-tres">
+                        <a href="portafolio.html">
+                           <div
+                              class="portafolio__card portafolio__card--cinco"
+                           >
+                              <h5 class="tag">Use case</h5>
+                              <h4>The Unlikely Mentorship</h4>
+                              <p>
+                                 Lorem ipsum dolor sit amet lorem ipsum dolor
+                                 sit amet lorem ipsum
+                              </p>
+                           </div>
+                        </a>
 
-                     <div class="portafolio__card portafolio__card--seis">
-                        <h4>Title Lorem ipsum dolor sit amet</h4>
-                        <p>
-                           Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                           lorem ipsum
-                        </p>
+                        <a href="portafolio.html">
+                           <div class="portafolio__card portafolio__card--seis">
+                              <h5 class="tag">Use case</h5>
+                              <h4>Merck LATAM’s Digital Transformation</h4>
+                              <p>
+                                 Redefining the Pharma Representatives Materials
+                                 through Service Design
+                              </p>
+                           </div>
+                        </a>
                      </div>
                   </div>
                </div>
@@ -194,7 +265,7 @@
          <section class="worked">
             <div class="custom-container">
                <div class="row">
-                  <div class="col-xl-11 offset-xl-1">
+                  <div class="col-lg-11 offset-lg-1">
                      <h2>I’ve worked with</h2>
 
                      <div class="worked--logos">
@@ -219,7 +290,7 @@
          <section class="contact" id="contact">
             <div class="custom-container">
                <div class="row">
-                  <div class="contact--info col-xl-7 offset-xl-1">
+                  <div class="contact--info col-lg-6">
                      <div class="contact--title">
                         <img
                            class="contact--title--uno"
@@ -241,7 +312,7 @@
                      <div class="contact__accesos">
                         <div class="contact__link">
                            <a
-                              href="http://"
+                              href="https://www.linkedin.com/in/soniagayossosanchez/"
                               target="_blank"
                               rel="noopener noreferrer"
                               id="link-mail"
@@ -249,7 +320,7 @@
                            </a>
 
                            <a
-                              href="http://"
+                              href="https://www.linkedin.com/in/soniagayossosanchez/"
                               target="_blank"
                               rel="noopener noreferrer"
                               id="link-linkedin"
@@ -257,7 +328,7 @@
                            </a>
 
                            <a
-                              href="http://"
+                              href="../img/CV-SoniaGayosso.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
                               id="link-pdf"
@@ -266,7 +337,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-xl-4 contact--img">
+                  <div class="col-lg-6 contact--img">
                      <picture>
                         <img src="img/img-contact.jpg" alt="" />
                      </picture>
@@ -277,7 +348,9 @@
       </main>
 
       <div class="sidebar">
-         <h5>Sonia Gayosso</h5>
+         <a href="./">
+            <h5>Sonia Gayosso</h5>
+         </a>
 
          <div class="sidebar--icons">
             <a
@@ -308,5 +381,9 @@
 
       <script type="module" src="./js/main.js"></script>
       <script type="module" src="./js/home.js"></script>
+      <script src="./js/jquery-3.4.1.min.js"></script>
+      <!-- <script src="./js/gsap.min.js"></script> -->
+      <script src="./js/ScrollMagic.js"></script>
+      <script src="./js/animation.gsap.js"></script>
    </body>
 </html>

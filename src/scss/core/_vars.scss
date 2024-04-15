@@ -3,6 +3,7 @@
     --color-secundario-01: #055864;
     --color-secundario-02: #8DF2FD;
     --color-gris-02: #304B5F;
+    --color-gris-03: #BAB9CC;
     --color-blanco-01: #fff;
     --color-blanco-02: #f0f0f5;
     --color-negro-01: #000;
@@ -10,8 +11,19 @@
     --color-primario-opacity: rgba(187, 38, 73, 0.75);
     --color-blanco-opacity: rgba(240, 240, 245, 0.75);
     --font-primaria-regular: "Open Sans", sans-serif;
+    --font-secondary-regular: "Manrope", sans-serif;
+    --font-terciary-regular: "Bitter", sans-serif;
 
-    --spacing-ml: 2rem;
-    --spacing-md: 1.5rem;
+    --spacing-6xl: 5rem;
+    --spacing-5xl: 4rem;
+    --spacing-4xl: 3.5rem;
+    --spacing-3xl: 3rem;
+    --spacing-2xl: 2.5rem;
+    --spacing-xl: 2rem;
+    --spacing-lg: 1.5rem;
+    --spacing-md: 1rem;
+    --spacing-sm: .75rem;
+    --spacing-xs: .5rem;
+    --spacing-xxs: .25rem;
 
 }
