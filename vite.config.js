@@ -9,6 +9,8 @@ export default {
       rollupOptions: {
          input: {
             index: path.resolve(__dirname, "src/index.html"),
+            articulo: path.resolve(__dirname, "src/articulo.html"),
+            portafolio: path.resolve(__dirname, "src/portafolio.html"),
          },
          output: {
             chunkFileNames: "js/[name]-[hash].js",
