@@ -69,8 +69,12 @@
     .header {
         height: auto;
         padding: 8px 16px;
-        position: relative !important;
-        width: auto !important;
+        width: 100% !important;
+        position: sticky;
+
+        &--navegacion ul li::after {
+            display: none;
+        }
 
         #li-contact {
             display: none;

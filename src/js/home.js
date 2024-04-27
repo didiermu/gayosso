@@ -1,3 +1,180 @@
+const mediaQueryPortrait = window.matchMedia("(max-width: 1279px)");
+
+// SVG
+
+function drawSvgHero() {
+   function pathPrepare($el) {
+      var lineLength = $el[0].getTotalLength();
+      $el.css("stroke-dasharray", lineLength);
+      $el.css("stroke-dashoffset", lineLength);
+   }
+
+   var $pathHero = $("#pathNuestros");
+
+   // prepare SVG
+
+   pathPrepare($pathHero);
+
+   // init controller
+   var controller = new ScrollMagic.Controller();
+
+   // build tween
+
+   var tween = new TimelineMax()
+      .add(
+         TweenMax.to($pathHero, 1, {
+            strokeDashoffset: 0,
+            ease: "sine.in",
+            delay: 1,
+         })
+      )
+      .add(TweenMax.to("path", 0, { ease: "sine.in" }), 0);
+
+   var scene = new ScrollMagic.Scene({
+      triggerElement: "#about",
+      duration: 100,
+      tweenChanges: true,
+      triggerHook: "onEnter",
+
+      // triggerHook: 0.65,
+   })
+      .setTween(tween)
+      .addTo(controller);
+}
+
+drawSvgHero();
+
+const animacionPortafolio = () => {
+   gsap.fromTo(
+      ".portafolio--title--uno",
+      {
+         xPercent: -40,
+         opacity: 0,
+      },
+      {
+         xPercent: 0,
+         opacity: 1,
+         duration: 1,
+         ease: "ease",
+         delay: 0,
+         scrollTrigger: {
+            trigger: ".portafolio",
+            start: "-=200 center",
+            end: "top center",
+            toggleActions: "restart pause reverse pause",
+            scrub: 2,
+            // markers: true,
+         },
+      }
+   );
+
+   gsap.fromTo(
+      ".portafolio--title svg path",
+      {
+         scaleX: 0,
+      },
+      {
+         scaleX: 1,
+         scrollTrigger: {
+            trigger: ".portafolio",
+            start: "+=100 center",
+            end: "=350 center",
+            ease: "ease",
+            scrub: 1,
+            toggleActions: "restart pause reverse pause",
+            // markers: true,
+         },
+      }
+   );
+};
+
+animacionPortafolio();
+
+const animacionConnect = () => {
+   gsap.fromTo(
+      ".contact--title--dos",
+      {
+         xPercent: -40,
+         opacity: 0,
+      },
+      {
+         xPercent: 0,
+         opacity: 1,
+         duration: 1,
+         ease: "ease",
+         delay: 0,
+         scrollTrigger: {
+            trigger: ".contact",
+            start: "-=200 center",
+            end: "top center",
+            toggleActions: "restart pause reverse pause",
+            scrub: 2,
+            // markers: true,
+         },
+      }
+   );
+
+   gsap.fromTo(
+      ".contact--title svg path",
+      {
+         scaleX: 0,
+      },
+      {
+         scaleX: 1,
+         duration: 2,
+         scrollTrigger: {
+            trigger: ".contact",
+            start: "+=200 center",
+            end: "=450 center",
+            ease: "ease",
+            scrub: 1,
+            toggleActions: "restart pause reverse pause",
+            // markers: true,
+         },
+      }
+   );
+};
+
+animacionConnect();
+
+function drawSvgContacto() {
+   function pathPrepare($el) {
+      var lineLength = $el[0].getTotalLength();
+      $el.css("stroke-dasharray", lineLength);
+      $el.css("stroke-dashoffset", lineLength);
+   }
+
+   var $pathConect = $("#pathConect");
+
+   // prepare SVG
+
+   pathPrepare($pathConect);
+
+   // init controller
+   var controller = new ScrollMagic.Controller();
+
+   // build tween
+
+   var tweenContacto = new TimelineMax()
+      .add(
+         TweenMax.to($pathConect, 1, {
+            strokeDashoffset: 0,
+            ease: "sine.in",
+            delay: 1,
+         })
+      )
+      .add(TweenMax.to("path", 0, { ease: "sine.in" }), 0);
+
+   var scene3 = new ScrollMagic.Scene({
+      triggerElement: "#contact",
+      duration: 100,
+      tweenChanges: true,
+      triggerHook: "onCenter",
+   })
+      .setTween(tweenContacto)
+      .addTo(controller);
+}
+
 const revealLoad = (el, movimiento, delay = 0) => {
    gsap.fromTo(
       el,
@@ -15,7 +192,24 @@ const revealLoad = (el, movimiento, delay = 0) => {
    );
 };
 
-const animacionX = (el, trigger, movimiento) => {
+const revealLoadY = (el, movimiento, delay = 0) => {
+   gsap.fromTo(
+      el,
+      {
+         yPercent: movimiento,
+         opacity: 0,
+      },
+      {
+         yPercent: 0,
+         opacity: 1,
+         duration: 0.8,
+         delay: delay,
+         ease: "ease",
+      }
+   );
+};
+
+const animacionX = (el, trigger, movimiento, callback) => {
    gsap.fromTo(
       el,
       {
@@ -30,10 +224,14 @@ const animacionX = (el, trigger, movimiento) => {
          delay: 0,
          scrollTrigger: {
             trigger: trigger,
-            start: "-=400 center",
-            end: "+=200 center",
+            start: "-=200 center",
+            end: "top center",
             scrub: 5,
             toggleActions: "restart pause reverse pause",
+            // markers: true,
+         },
+         onComplete: function () {
+            callback;
          },
       }
    );
@@ -57,7 +255,7 @@ const animacionYSlow = (el, trigger, movimiento = 40, delay = 0) => {
             scrollTrigger: {
                trigger: trigger,
                start: "-=400 center",
-               end: "+=200 center",
+               end: "top center",
                scrub: 5,
                toggleActions: "restart pause reverse pause",
             },
@@ -67,44 +265,83 @@ const animacionYSlow = (el, trigger, movimiento = 40, delay = 0) => {
 };
 
 const animacionYFast = (el, trigger, movimiento = 40) => {
-   gsap.fromTo(
-      el,
-      {
-         yPercent: movimiento,
-         opacity: 0,
-      },
-      {
-         yPercent: 0,
-         opacity: 1,
-         duration: 0.1,
-         ease: "ease",
-         scrollTrigger: {
-            trigger: trigger,
-            start: "top center",
-            end: "top center",
-            scrub: 2.5,
-            toggleActions: "restart pause reverse pause",
+   var sections = gsap.utils.toArray(el);
+   sections.forEach((section) => {
+      gsap.fromTo(
+         el,
+         {
+            yPercent: movimiento,
+            opacity: 0,
          },
-      }
-   );
+         {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.1,
+            ease: "ease",
+            scrollTrigger: {
+               trigger: trigger,
+               start: "-=400 center",
+               end: "top center",
+               scrub: 2.5,
+               toggleActions: "restart pause reverse pause",
+            },
+         }
+      );
+   });
 };
+
+const animacionEach = () => {
+   const boxes = gsap.utils.toArray(".portafolio--contenedor a");
+   boxes.forEach((box) => {
+      gsap.fromTo(
+         box,
+         {
+            y: 60,
+            opacity: 0,
+         },
+         {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+               trigger: box,
+               start: "-=400 center",
+               end: "top center",
+               scrub: 5,
+               toggleActions: "restart pause reverse pause",
+            },
+         }
+      );
+   });
+};
+
+animacionEach();
 
 revealLoad(".hero--title--uno", 40);
 revealLoad(".hero--title--dos", -40, 1);
 
-animacionX(".portafolio--title--uno", ".portafolio", 40);
-animacionX(".portafolio--title--dos", ".portafolio", -140);
+// animacionX(".portafolio--title--uno", ".portafolio", -40, drawSvgPortafolio());
+animacionX(".portafolio--title--dos", ".portafolio", 40);
+animacionYSlow(".portafolio #title-mobile", ".portafolio", 60);
 
 animacionX(".worked h2", ".worked", -40);
 
-animacionX(".contact--title--dos", ".contact", 40);
-animacionX(".contact--title--uno", ".contact", -40);
-
-animacionYSlow(".resume img", ".resume");
-animacionYSlow(".resume--text", ".resume");
-
-animacionYFast(".portafolio--contenedor a", ".portafolio--contenedor", 260);
 animacionX(".worked--logos img", ".worked", 240);
+
+animacionX(".contact--title--uno", ".contact", 40);
+// animacionX(".contact--title--dos", ".contact", 40);
+animacionX(".contact__link", ".contact", -40);
+
+animacionX(".contact #title-mobile", ".contact", 40);
+
+if (mediaQueryPortrait.matches) {
+   revealLoadY(".hero--text", 40);
+   revealLoadY(".resume img", 40, 0.7);
+   revealLoadY(".resume--text", -40, 0.8);
+   animacionYFast(".contact--img", ".contact", 40);
+} else {
+   animacionYFast(".resume img", ".resume", 60);
+   animacionYSlow(".resume--text", ".resume");
+}
 
 // HEADER
 
@@ -139,54 +376,7 @@ const anclas = () => {
 
 anclas();
 
-// SVG
-function drawSvgServicios() {
-   function pathPrepare($el) {
-      var lineLength = $el[0].getTotalLength();
-      $el.css("stroke-dasharray", lineLength);
-      $el.css("stroke-dashoffset", lineLength);
-   }
-
-   var $pathNuestros = $("#pathNuestros");
-
-   // prepare SVG
-
-   pathPrepare($pathNuestros);
-
-   // init controller
-   var controller = new ScrollMagic.Controller();
-
-   // build tween
-
-   var tween = new TimelineMax()
-      .add(
-         TweenMax.to($pathNuestros, 1, {
-            strokeDashoffset: 0,
-            ease: "sine.in",
-            delay: 1,
-         })
-      )
-      .add(TweenMax.to("path", 0, { ease: "sine.in" }), 0);
-
-   // build scene
-
-   var scene2 = new ScrollMagic.Scene({
-      triggerElement: "#about",
-      duration: 100,
-      tweenChanges: true,
-      triggerHook: "onEnter",
-
-      // triggerHook: 0.65,
-   })
-      .setTween(tween)
-      .addTo(controller);
-}
-
-drawSvgServicios();
-
 //////////////////// PORTAFOLIO //////////////////
-
-const mediaQuery = window.matchMedia("(max-width: 1279px)");
 
 const proyectos = () => {
    const cardUno = document
@@ -210,18 +400,40 @@ const proyectos = () => {
 
    const colTres = document.querySelector("#col-tres");
 
-   if (mediaQuery.matches) {
+   if (mediaQueryPortrait.matches) {
       cardUno.insertAdjacentElement("afterend", cardDos);
       cardCuatro.insertAdjacentElement("afterend", cardCinco);
       cardCinco.insertAdjacentElement("afterend", cardSeis);
-      console.log("m");
+      // console.log("m");
    } else {
       cardTres.insertAdjacentElement("afterend", cardDos);
       colTres.insertAdjacentElement("afterbegin", cardCinco);
       cardCinco.insertAdjacentElement("afterend", cardSeis);
-      console.log("d");
+      // console.log("d");
    }
 };
 
-mediaQuery.addListener(proyectos);
+mediaQueryPortrait.addListener(proyectos);
 proyectos();
+
+// SCROLL HIDE
+
+const hideTop = () => {
+   const btnTop = document.querySelector("#back-top");
+   var div = document.querySelector(".resume");
+
+   window.onscroll = function () {
+      var scrollPosition =
+         window.pageYOffset || document.documentElement.scrollTop;
+
+      var divPosition = div.offsetTop;
+
+      if (scrollPosition > divPosition) {
+         btnTop.style.opacity = 1;
+      } else {
+         btnTop.style.opacity = 0;
+      }
+   };
+};
+
+hideTop();

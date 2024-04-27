@@ -46,7 +46,10 @@
             p {
                 @include text-lg-32;
                 font-weight: 100;
+                color: var(--color-gris-02);
             }
+
+
         }
 
         &--banner {
@@ -91,7 +94,7 @@
             svg {
                 position: absolute;
                 left: 279px;
-                top: 80px;
+                top: 30px;
             }
         }
     }
@@ -110,9 +113,24 @@
             flex-direction: column;
         }
 
-        p {
+        p,
+        ul {
             font-family: var(--font-terciary-regular);
             @include text-sm-16;
+            padding: 0 var(--spacing-lg);
+
+        }
+
+        ul {
+            padding: 0 var(--spacing-lg);
+            list-style-position: inside;
+            margin-bottom: 0;
+            @include text-sm-16;
+        }
+
+        h4 {
+            @include text-md-24;
+            font-weight: 100;
             padding: 0 var(--spacing-lg);
         }
 
@@ -136,6 +154,17 @@
 }
 
 
+@media(width > 1440px) {
+    .main-articulo {
+        .hero {
+            &--title {
+                left: calc(580px + 640 * (100vw - 1280px) / 1440);
+            }
+        }
+    }
+}
+
+
 @media(width < 1280px) {
     .main-articulo {
         .hero {
@@ -145,9 +174,17 @@
                 left: calc(112px - 190 * (100vw - 1280px) / 768);
                 bottom: -63px;
                 padding: 45px 100px 45px 0;
+                overflow: hidden;
 
                 img {
                     width: 200px;
+                }
+
+                svg {
+                    left: 199px;
+                    top: 21px;
+                    height: 4px;
+
                 }
             }
 
@@ -194,10 +231,22 @@
 
             &--banner {
                 position: relative;
-                order: 2;
+                order: 1;
 
                 &>picture {
-                    height: auto;
+                    min-height: 455px;
+                    object-fit: cover;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: rgba(0, 0, 0, .3);
+                    }
                 }
 
                 img {
@@ -217,11 +266,12 @@
             }
 
             &--title {
-                background: none;
                 left: 0;
                 bottom: 0;
                 width: 100%;
                 padding: 0;
+                margin: 0;
+                top: auto;
 
                 &--dos,
                 svg {
@@ -232,6 +282,7 @@
             &--info {
                 margin-top: auto;
                 min-width: auto;
+                order: 2;
 
                 h1 {
                     @include text-lg-48;

@@ -87,6 +87,7 @@
         @include text-xl-56;
         margin-bottom: var(--spacing-3xl);
         font-weight: 100;
+        color: var(--color-gris-02);
     }
 
 
@@ -109,7 +110,7 @@
             text-decoration: none;
             display: grid;
             place-content: flex-start;
-            row-gap: var(--spacing-xxs);
+            row-gap: var(--spacing-xs);
             background: var(--color-blanco-02);
             padding: var(--spacing-lg) var(--spacing-4xl) var(--spacing-lg) var(--spacing-lg);
             border: 1px solid #DADCDF;
@@ -148,6 +149,8 @@
     }
 
     @media(width < 768px) {
+        padding-top: var(--spacing-xl);
+
         .col-lg-4 a {
             border-width: 0 0 1px 0;
         }

@@ -42,12 +42,22 @@
     &:has(.main-portafolio),
     &:has(.main-articulo) {
 
-
         #li-portafolio {
             &::after {
                 background: var(--color-primario-01);
             }
         }
+    }
+}
 
+@media(width < 768px) {
+    & {
+
+        &:has(.main-portafolio),
+        &:has(.main-articulo) {
+            .header--navegacion ul li::after {
+                display: block;
+            }
+        }
     }
 }

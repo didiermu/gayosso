@@ -28,6 +28,19 @@
         text-decoration: none;
     }
 
+    .link-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 24px;
+
+        #icon-back {
+            transform: rotateZ(270deg);
+            width: max-content;
+            font-size: 28px;
+        }
+    }
+
     h5 {
         color: var(--color-primario-01);
         writing-mode: tb;
@@ -61,6 +74,8 @@
         margin-top: 24px;
         cursor: pointer;
         font-size: 30px;
+        opacity: 0;
+        transition: .3s ease-in-out;
 
         @media(hover:hover) {
             &:hover {
@@ -80,6 +95,22 @@
     }
 
     .sidebar {
-        display: none;
+        width: 0;
+        background: none;
+        padding: 0;
+        height: auto;
+        position: absolute;
+
+        * {
+            display: none;
+        }
+
+        #icon-back {
+            position: absolute;
+            top: 68px;
+            left: 24px;
+            display: block;
+            color: var(--color-blanco-01);
+        }
     }
 }
