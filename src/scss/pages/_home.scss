@@ -190,7 +190,7 @@
                 position: absolute;
                 top: 47px;
                 left: 340px;
-                width: calc(418px + 610 * (100vw - 1280px) / 1920);
+                width: calc(418px + 650 * (100vw - 1280px) / 1920);
 
                 path {
                     stroke-width: 16px;
@@ -404,12 +404,13 @@
             display: grid;
             row-gap: 16px;
             position: relative;
+            overflow: hidden;
             // @extend .offset-lg-1;
 
             svg {
                 position: absolute;
                 top: calc(99px + 126*(100vw - 1280px) / 1920);
-                left: calc(376px + 580*(100vw - 1280px) / 1920);
+                left: calc(370px + 580*(100vw - 1280px) / 1920);
                 width: calc(760px + 1160 * (100vw - 1280px) / 1920);
 
                 path {
@@ -532,6 +533,7 @@
         .portafolio {
             &--title {
                 top: calc(0px + 300 * (100vw - 1440px) / 1920);
+                left: calc(100px + 860*(100vw - 1440px) / 1920);
             }
 
             &__card--wrap {

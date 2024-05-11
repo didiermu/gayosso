@@ -37,7 +37,9 @@
         #icon-back {
             transform: rotateZ(270deg);
             width: max-content;
-            font-size: 28px;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
         }
     }
 

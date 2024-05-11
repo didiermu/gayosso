@@ -23,7 +23,7 @@
             list-style: none;
             display: flex;
             align-items: center;
-            column-gap: 52px;
+            column-gap: 32px;
 
 
             li {
@@ -72,8 +72,10 @@
         width: 100% !important;
         position: sticky;
 
-        &--navegacion ul li::after {
-            display: none;
+        &--navegacion ul li {
+            &::after {
+                display: none;
+            }
         }
 
         #li-contact {
@@ -95,7 +97,7 @@
             justify-content: flex-end;
             align-items: center;
             width: 100%;
-            column-gap: 32px;
+            column-gap: 24px;
         }
     }
 }
