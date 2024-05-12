@@ -156,6 +156,14 @@
     @media(width < 768px) {
         padding-top: var(--spacing-xl);
 
+        .custom-container {
+            padding: 0;
+        }
+
+        h2 {
+            padding: 0 24px;
+        }
+
         .col-xl-10 {
             .row {
                 row-gap: 8px;

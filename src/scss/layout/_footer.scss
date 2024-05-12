@@ -108,11 +108,14 @@
         }
 
         .link-back #icon-back {
-
             top: 68px;
             left: 24px;
             display: block;
             color: var(--color-blanco-01);
+
+            &.black {
+                color: var(--color-negro-01);
+            }
         }
     }
 }

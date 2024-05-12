@@ -154,6 +154,7 @@
                 font-weight: 500;
                 @include text-sm-18;
                 transition: .3s ease-in-out;
+                color: inherit;
 
                 &::before {
                     content: "\e900";
