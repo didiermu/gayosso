@@ -327,6 +327,8 @@ animacionX(".worked h2", ".worked", -40);
 
 animacionX(".worked--logos img", ".worked", 240);
 
+animacionYSlow(".videos .videos--grid__contenedor", ".videos", 60);
+
 animacionX(".contact--title--uno", ".contact", 40);
 // animacionX(".contact--title--dos", ".contact", 40);
 animacionX(".contact__link", ".contact", -40);
@@ -437,3 +439,105 @@ const hideTop = () => {
 };
 
 hideTop();
+
+// YOUTUBE
+// import "@justinribeiro/lite-youtube";
+
+function isDesktop() {
+   return (
+      window.matchMedia("(min-width: 768px)").matches &&
+      !("ontouchstart" in document.documentElement)
+   );
+}
+
+const playVideo = () => {
+   document.addEventListener("DOMContentLoaded", function () {
+      let videoAdded = false;
+
+      const videoContainer = document.getElementById("video1");
+
+      const handleVideoEvent = function (event) {
+         event.preventDefault();
+
+         if (!videoAdded) {
+            this.querySelector("h4").style.display = "none";
+            this.querySelector("img").style.display = "none";
+
+            const youtubeTag = document.createElement("iframe");
+            youtubeTag.setAttribute(
+               "src",
+               "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
+            );
+            youtubeTag.setAttribute(
+               "allow",
+               "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            );
+            this.appendChild(youtubeTag);
+            videoAdded = true;
+         } else {
+            // Si ya se agregó el video, removerlo y volver a mostrar el poster y título
+            const iframe = this.querySelector("iframe");
+            if (iframe) {
+               iframe.remove(); // Remueve completamente el iframe
+               this.querySelector("h4").style.display = "block";
+               this.querySelector("img").style.display = "block";
+               videoAdded = false; // Restaura el estado inicial
+            }
+         }
+      };
+
+      if (isDesktop()) {
+         videoContainer.addEventListener("mouseenter", handleVideoEvent);
+         videoContainer.addEventListener("mouseleave", handleVideoEvent);
+      } else {
+         videoContainer.addEventListener("click", handleVideoEvent);
+      }
+   });
+
+   document.querySelectorAll(".videos video").forEach((video) => {
+      const playVideo = function () {
+         this.play();
+      };
+
+      const stopVideo = function () {
+         this.pause();
+         this.currentTime = 0;
+         this.load();
+         this.removeAttribute("controls");
+      };
+
+      const handlePlay = function () {
+         this.setAttribute("controls", "");
+         let titulo = this.nextElementSibling;
+         if (titulo && titulo.tagName === "H4") {
+            titulo.style.display = "none";
+         }
+      };
+
+      const handleEnded = function () {
+         let titulo = this.nextElementSibling;
+         if (titulo && titulo.tagName === "H4") {
+            titulo.style.display = "block";
+         }
+         stopVideo.call(this); // Llama a stopVideo cuando el video termina
+      };
+
+      if (isDesktop()) {
+         video.addEventListener("mouseenter", playVideo);
+         video.addEventListener("mouseleave", stopVideo);
+      } else {
+         video.addEventListener("click", function () {
+            if (this.paused) {
+               playVideo.call(this);
+            } else {
+               stopVideo.call(this);
+            }
+         });
+      }
+
+      video.addEventListener("play", handlePlay);
+      video.addEventListener("ended", handleEnded);
+   });
+};
+
+playVideo();

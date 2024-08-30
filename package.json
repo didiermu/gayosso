@@ -23,6 +23,7 @@
     "vite-plugin-purgecss": "^0.2.12"
   },
   "dependencies": {
+    "@justinribeiro/lite-youtube": "^1.5.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.1",
     "swiper": "^10.3.1"
