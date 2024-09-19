@@ -19,6 +19,7 @@
     "postcss-cli": "^10.1.0",
     "purgecss": "^5.0.0",
     "sass": "^1.66.1",
+    "video.js": "^8.17.4",
     "vite": "^4.4.9",
     "vite-plugin-purgecss": "^0.2.12"
   },

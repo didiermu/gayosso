@@ -608,6 +608,7 @@ const enableSwiper = () => {
       direction: "vertical",
       loop: true,
       slidesPerView: 1,
+      margin: 40,
    });
 };
 

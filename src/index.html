@@ -299,6 +299,28 @@
 
          <section class="videos">
             <div class="custom-container">
+               <!-- <video
+                  id="my-video"
+                  class="video-js"
+                  controls
+                  preload="auto"
+                  width="640"
+                  height="264"
+                  poster="img/05-Omnipod5.jpg"
+                  data-setup="{}"
+               >
+                  <source src="video/01-Insulet.mp4" type="video/mp4" />
+                  <p class="vjs-no-js">
+                     To view this video please enable JavaScript, and consider
+                     upgrading to a web browser that
+                     <a
+                        href="https://videojs.com/html5-video-support/"
+                        target="_blank"
+                        >supports HTML5 video</a
+                     >
+                  </p>
+               </video> -->
+
                <div class="row">
                   <div class="col-12 videos--grid">
                      <div
@@ -314,7 +336,7 @@
                         class="videos--grid__contenedor"
                         data-bs-target="#exampleModalFullscreen"
                      >
-                        <video muted poster="img/01-Insulet.jpg">
+                        <video muted playsinline poster="img/01-Insulet.jpg">
                            <source
                               src="video/01-Insulet.mp4"
                               type="video/mp4"
@@ -329,7 +351,11 @@
                         class="videos--grid__contenedor"
                         data-bs-target="#exampleModalFullscreen"
                      >
-                        <video muted poster="img/02-Collaboration.jpg">
+                        <video
+                           muted
+                           playsinline
+                           poster="img/02-Collaboration.jpg"
+                        >
                            <source
                               src="video/02-Collaboration.mp4"
                               type="video/mp4"
@@ -344,7 +370,7 @@
                         class="videos--grid__contenedor"
                         data-bs-target="#exampleModalFullscreen"
                      >
-                        <video muted poster="img/03-EndToEnd.jpg">
+                        <video muted playsinline poster="img/03-EndToEnd.jpg">
                            <source
                               src="video/03-EndToEnd.mp4"
                               type="video/mp4"
@@ -359,7 +385,7 @@
                         class="videos--grid__contenedor"
                         data-bs-target="#exampleModalFullscreen"
                      >
-                        <video muted poster="img/04-Merck.jpg">
+                        <video muted playsinline poster="img/04-Merck.jpg">
                            <source src="video/04-Merck.mp4" type="video/mp4" />
                            Tu navegador no admite el elemento
                            <code>video</code>.
@@ -399,6 +425,7 @@
                                     <video
                                        muted
                                        controls
+                                       playsinline
                                        poster="img/01-Insulet.jpg"
                                     >
                                        <source
@@ -413,6 +440,7 @@
                                     <video
                                        muted
                                        controls
+                                       playsinline
                                        poster="img/02-Collaboration.jpg"
                                     >
                                        <source
@@ -427,6 +455,7 @@
                                     <video
                                        muted
                                        controls
+                                       playsinline
                                        poster="img/03-EndToEnd.jpg"
                                     >
                                        <source
@@ -441,6 +470,7 @@
                                     <video
                                        muted
                                        controls
+                                       playsinline
                                        poster="img/04-Merck.jpg"
                                     >
                                        <source
