@@ -1,3 +1,6 @@
+import Swiper from "swiper";
+import "swiper/css";
+
 const mediaQueryPortrait = window.matchMedia("(max-width: 1279px)");
 
 // SVG
@@ -330,7 +333,6 @@ animacionX(".worked--logos img", ".worked", 240);
 animacionYSlow(".videos .videos--grid__contenedor", ".videos", 60);
 
 animacionX(".contact--title--uno", ".contact", 40);
-// animacionX(".contact--title--dos", ".contact", 40);
 animacionX(".contact__link", ".contact", -40);
 
 animacionX(".contact #title-mobile", ".contact", 40);
@@ -418,7 +420,7 @@ const proyectos = () => {
 mediaQueryPortrait.addListener(proyectos);
 proyectos();
 
-// SCROLL HIDE
+//////////// SCROLL HIDE
 
 const hideTop = () => {
    const btnTop = document.querySelector("#back-top");
@@ -440,61 +442,95 @@ const hideTop = () => {
 
 hideTop();
 
-// YOUTUBE
-// import "@justinribeiro/lite-youtube";
+/////////////////  VIDEOS /////////////////
 
-function isDesktop() {
-   return (
-      window.matchMedia("(min-width: 768px)").matches &&
-      !("ontouchstart" in document.documentElement)
-   );
-}
+let swiper;
+const videos = document.querySelectorAll(".videos video");
+const videosGrid = document.querySelectorAll(".videos--grid__contenedor");
+const videosModal = document.querySelectorAll(".modal .swiper-slide");
+const myModalEl = document.getElementById("exampleModalFullscreen");
+
+const toggleMuteAllVideos = () => {
+   videos.forEach((video) => {
+      video.addEventListener("volumechange", function () {
+         // Obtener el estado de mute del video que disparó el evento
+         const isMuted = video.muted;
+
+         // Asignar ese estado a todos los demás videos
+         videos.forEach((v) => {
+            v.muted = isMuted;
+         });
+      });
+   });
+};
+
+// function isDesktop() {
+//    return (
+//       window.matchMedia("(min-width: 768px)").matches &&
+//       !("ontouchstart" in document.documentElement)
+//    );
+// }
 
 const playVideo = () => {
-   document.addEventListener("DOMContentLoaded", function () {
-      let videoAdded = false;
+   // YOUTUBE
+   let videoAdded = false;
 
-      const videoContainer = document.getElementById("video1");
+   const videoContainer = document.getElementById("video1");
 
-      const handleVideoEvent = function (event) {
-         event.preventDefault();
+   const handleVideoEvent = function (event) {
+      event.preventDefault();
 
-         if (!videoAdded) {
-            this.querySelector("h4").style.display = "none";
-            this.querySelector("img").style.display = "none";
+      if (!videoAdded) {
+         this.querySelector("h4").style.display = "none";
+         this.querySelector("img").style.display = "none";
 
-            const youtubeTag = document.createElement("iframe");
-            youtubeTag.setAttribute(
-               "src",
-               "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
-            );
-            youtubeTag.setAttribute(
-               "allow",
-               "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            );
-            this.appendChild(youtubeTag);
-            videoAdded = true;
-         } else {
-            // Si ya se agregó el video, removerlo y volver a mostrar el poster y título
-            const iframe = this.querySelector("iframe");
-            if (iframe) {
-               iframe.remove(); // Remueve completamente el iframe
-               this.querySelector("h4").style.display = "block";
-               this.querySelector("img").style.display = "block";
-               videoAdded = false; // Restaura el estado inicial
-            }
+         const youtubeTag = document.createElement("iframe");
+         youtubeTag.setAttribute(
+            "src",
+            "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
+         );
+         youtubeTag.setAttribute(
+            "allow",
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         );
+         this.appendChild(youtubeTag);
+         videoAdded = true;
+      } else {
+         // Si ya se agregó el video, removerlo y volver a mostrar el poster y título
+         const iframe = this.querySelector("iframe");
+         if (iframe) {
+            iframe.remove(); // Remueve completamente el iframe
+            this.querySelector("h4").style.display = "block";
+            this.querySelector("img").style.display = "block";
+            videoAdded = false; // Restaura el estado inicial
          }
-      };
+      }
+   };
 
-      if (isDesktop()) {
+   // Función para gestionar los eventos según el tamaño de la ventana
+   const manageVideoEvents = () => {
+      // if (isDesktop()) {
+      if (mediaQueryPortrait.matches) {
+         videoContainer.removeEventListener("mouseenter", handleVideoEvent);
+         videoContainer.removeEventListener("mouseleave", handleVideoEvent);
+         videoContainer.setAttribute("data-bs-toggle", "modal"); // Agregar el modal para mobile
+      } else {
+         videoContainer.removeAttribute("data-bs-toggle"); // Remover el atributo modal para desktop
          videoContainer.addEventListener("mouseenter", handleVideoEvent);
          videoContainer.addEventListener("mouseleave", handleVideoEvent);
-      } else {
-         videoContainer.addEventListener("click", handleVideoEvent);
       }
-   });
+   };
 
-   document.querySelectorAll(".videos video").forEach((video) => {
+   // Ejecutar al cargar la página
+   manageVideoEvents();
+
+   // Escuchar el evento 'resize' y volver a ejecutar la lógica
+   // window.addEventListener("resize", manageVideoEvents);
+   mediaQueryPortrait.addListener(manageVideoEvents);
+
+   // LOCALES
+
+   videos.forEach((video) => {
       const playVideo = function () {
          this.play();
       };
@@ -522,22 +558,141 @@ const playVideo = () => {
          stopVideo.call(this); // Llama a stopVideo cuando el video termina
       };
 
-      if (isDesktop()) {
-         video.addEventListener("mouseenter", playVideo);
-         video.addEventListener("mouseleave", stopVideo);
-      } else {
-         video.addEventListener("click", function () {
-            if (this.paused) {
-               playVideo.call(this);
-            } else {
-               stopVideo.call(this);
-            }
-         });
-      }
+      const manageVideoEventsLocales = () => {
+         // if (isDesktop()) {
+         if (mediaQueryPortrait.matches) {
+            video.removeEventListener("mouseenter", playVideo);
+            video.removeEventListener("mouseenter", handlePlay);
+            video.removeEventListener("mouseleave", stopVideo);
+            video.removeEventListener("mouseleave", handleEnded);
+         } else {
+            video.addEventListener("mouseenter", playVideo);
+            video.addEventListener("mouseenter", handlePlay);
+            video.addEventListener("mouseleave", stopVideo);
+            video.addEventListener("mouseleave", handleEnded);
+         }
 
-      video.addEventListener("play", handlePlay);
-      video.addEventListener("ended", handleEnded);
+         video.addEventListener("play", handlePlay);
+         video.addEventListener("ended", handleEnded);
+      };
+
+      manageVideoEventsLocales();
+      mediaQueryPortrait.addListener(manageVideoEventsLocales);
+      // window.addEventListener("resize", manageVideoEventsLocales);
+
+      // if (isDesktop()) {
+      //    video.addEventListener("mouseenter", playVideo);
+      //    video.addEventListener("mouseleave", stopVideo);
+      // }
    });
 };
 
 playVideo();
+// mediaQueryPortrait.addListener(playVideo);
+
+///////// VIDEOS MODAL
+
+const initSlider = () => {
+   if (mediaQueryPortrait.matches === true) {
+      return enableSwiper();
+   } else if (mediaQueryPortrait.matches === false) {
+      if (swiper !== undefined) {
+         swiper.destroy(true, true);
+      }
+      return;
+   }
+};
+
+const enableSwiper = () => {
+   swiper = new Swiper(".swiper", {
+      direction: "vertical",
+      loop: true,
+      slidesPerView: 1,
+   });
+};
+
+mediaQueryPortrait.addListener(initSlider);
+initSlider();
+
+const videosSlide = () => {
+   const iframeSlide = document.querySelector(".swiper-slide iframe");
+
+   videosGrid.forEach((video, index) => {
+      video.addEventListener("click", function () {
+         swiper.slideTo(index);
+      });
+
+      if (mediaQueryPortrait.matches) {
+         // console.log("m");
+         video.setAttribute("data-bs-toggle", "modal");
+      } else {
+         // console.log("d");
+         video.removeAttribute("data-bs-toggle");
+      }
+   });
+
+   const stopVideo = function () {
+      this.pause();
+      this.currentTime = 0;
+      this.load();
+      this.removeAttribute("controls");
+   };
+
+   const resetVideos = () => {
+      let activo = swiper.slides[swiper.activeIndex].children[0];
+      if (activo.tagName === "VIDEO") {
+         // iframeSlide.removeAttribute("src");
+         iframeSlide.setAttribute(
+            "src",
+            "https://www.youtube.com/embed/T84TitSO-qg?autoplay=0&mute=1"
+         );
+         videosModal.forEach((slide) => {
+            let videosSlides = slide.querySelectorAll("video");
+            videosSlides.forEach((video) => {
+               stopVideo.call(video);
+            });
+         });
+         activo.play();
+      } else if (activo.tagName === "IFRAME") {
+         iframeSlide.setAttribute(
+            "src",
+            "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
+         );
+         videosModal.forEach((slide) => {
+            let videosSlides = slide.querySelectorAll("video");
+            videosSlides.forEach((video) => {
+               stopVideo.call(video);
+            });
+         });
+      }
+   };
+
+   swiper.on("slideChange", () => {
+      resetVideos();
+   });
+
+   myModalEl.addEventListener("shown.bs.modal", (event) => {
+      resetVideos();
+   });
+
+   myModalEl.addEventListener("hidden.bs.modal", (event) => {
+      iframeSlide.removeAttribute("src");
+      // iframeSlide.setAttribute(
+      //    "src",
+      //    "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
+      // );
+      videosModal.forEach((slide) => {
+         let hijo = slide.children[0];
+         if (hijo.tagName === "VIDEO") {
+            stopVideo.call(slide.querySelector("video"));
+         }
+      });
+   });
+};
+
+if (mediaQueryPortrait.matches) {
+   videosSlide();
+}
+mediaQueryPortrait.addListener(videosSlide);
+
+toggleMuteAllVideos();

@@ -48,6 +48,10 @@
             }
         }
     }
+
+    .modal-backdrop.show {
+        opacity: .9;
+    }
 }
 
 @media(width < 768px) {

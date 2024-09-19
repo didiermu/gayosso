@@ -301,11 +301,19 @@
             <div class="custom-container">
                <div class="row">
                   <div class="col-12 videos--grid">
-                     <div id="video1" class="videos--grid__contenedor">
+                     <div
+                        id="video1"
+                        class="videos--grid__contenedor"
+                        data-bs-target="#exampleModalFullscreen"
+                     >
                         <img src="img/05-Omnipod5.jpg" />
                         <h4>Omnipod 5</h4>
                      </div>
-                     <div id="video2" class="videos--grid__contenedor">
+                     <div
+                        id="video2"
+                        class="videos--grid__contenedor"
+                        data-bs-target="#exampleModalFullscreen"
+                     >
                         <video muted poster="img/01-Insulet.jpg">
                            <source
                               src="video/01-Insulet.mp4"
@@ -316,7 +324,11 @@
                         </video>
                         <h4>Insulet</h4>
                      </div>
-                     <div id="video3" class="videos--grid__contenedor">
+                     <div
+                        id="video3"
+                        class="videos--grid__contenedor"
+                        data-bs-target="#exampleModalFullscreen"
+                     >
                         <video muted poster="img/02-Collaboration.jpg">
                            <source
                               src="video/02-Collaboration.mp4"
@@ -327,7 +339,11 @@
                         </video>
                         <h4>Collaboration</h4>
                      </div>
-                     <div id="video4" class="videos--grid__contenedor">
+                     <div
+                        id="video4"
+                        class="videos--grid__contenedor"
+                        data-bs-target="#exampleModalFullscreen"
+                     >
                         <video muted poster="img/03-EndToEnd.jpg">
                            <source
                               src="video/03-EndToEnd.mp4"
@@ -338,13 +354,106 @@
                         </video>
                         <h4>End to End</h4>
                      </div>
-                     <div id="video5" class="videos--grid__contenedor">
+                     <div
+                        id="video5"
+                        class="videos--grid__contenedor"
+                        data-bs-target="#exampleModalFullscreen"
+                     >
                         <video muted poster="img/04-Merck.jpg">
                            <source src="video/04-Merck.mp4" type="video/mp4" />
                            Tu navegador no admite el elemento
                            <code>video</code>.
                         </video>
                         <h4>Merck</h4>
+                     </div>
+                  </div>
+                  <div
+                     class="modal fade"
+                     id="exampleModalFullscreen"
+                     tabindex="-1"
+                     aria-labelledby="exampleModalFullscreenLabel"
+                     aria-hidden="true"
+                  >
+                     <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                           <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                           ></button>
+                           <div class="swiper">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                    <iframe
+                                       id="iframeSlide"
+                                       height="315"
+                                       title="YouTube video player"
+                                       frameborder="0"
+                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                       referrerpolicy="strict-origin-when-cross-origin"
+                                    ></iframe>
+                                    <div class="capa"></div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <video
+                                       muted
+                                       controls
+                                       poster="img/01-Insulet.jpg"
+                                    >
+                                       <source
+                                          src="video/01-Insulet.mp4"
+                                          type="video/mp4"
+                                       />
+                                       Tu navegador no admite el elemento
+                                       <code>video</code>.
+                                    </video>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <video
+                                       muted
+                                       controls
+                                       poster="img/02-Collaboration.jpg"
+                                    >
+                                       <source
+                                          src="video/02-Collaboration.mp4"
+                                          type="video/mp4"
+                                       />
+                                       Tu navegador no admite el elemento
+                                       <code>video</code>.
+                                    </video>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <video
+                                       muted
+                                       controls
+                                       poster="img/03-EndToEnd.jpg"
+                                    >
+                                       <source
+                                          src="video/03-EndToEnd.mp4"
+                                          type="video/mp4"
+                                       />
+                                       Tu navegador no admite el elemento
+                                       <code>video</code>.
+                                    </video>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <video
+                                       muted
+                                       controls
+                                       poster="img/04-Merck.jpg"
+                                    >
+                                       <source
+                                          src="video/04-Merck.mp4"
+                                          type="video/mp4"
+                                       />
+                                       Tu navegador no admite el elemento
+                                       <code>video</code>.
+                                    </video>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
