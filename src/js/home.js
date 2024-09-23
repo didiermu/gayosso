@@ -472,60 +472,6 @@ const toggleMuteAllVideos = () => {
 // }
 
 const playVideo = () => {
-   // YOUTUBE
-   // let videoAdded = false;
-
-   // const videoContainer = document.getElementById("video1");
-
-   // const handleVideoEvent = function (event) {
-   //    event.preventDefault();
-
-   //    if (!videoAdded) {
-   //       this.querySelector("h4").style.display = "none";
-   //       this.querySelector("img").style.display = "none";
-
-   //       const youtubeTag = document.createElement("iframe");
-   //       youtubeTag.setAttribute(
-   //          "src",
-   //          "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
-   //       );
-   //       youtubeTag.setAttribute(
-   //          "allow",
-   //          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   //       );
-   //       this.appendChild(youtubeTag);
-   //       videoAdded = true;
-   //    } else {
-   //       // Si ya se agregó el video, removerlo y volver a mostrar el poster y título
-   //       const iframe = this.querySelector("iframe");
-   //       if (iframe) {
-   //          iframe.remove(); // Remueve completamente el iframe
-   //          this.querySelector("h4").style.display = "block";
-   //          this.querySelector("img").style.display = "block";
-   //          videoAdded = false; // Restaura el estado inicial
-   //       }
-   //    }
-   // };
-
-   // // Función para gestionar los eventos según el tamaño de la ventana
-   // const manageVideoEvents = () => {
-   //    // if (isDesktop()) {
-   //    if (mediaQueryPortrait.matches) {
-   //       videoContainer.removeEventListener("mouseenter", handleVideoEvent);
-   //       videoContainer.removeEventListener("mouseleave", handleVideoEvent);
-   //       videoContainer.setAttribute("data-bs-toggle", "modal"); // Agregar el modal para mobile
-   //    } else {
-   //       videoContainer.removeAttribute("data-bs-toggle"); // Remover el atributo modal para desktop
-   //       videoContainer.addEventListener("mouseenter", handleVideoEvent);
-   //       videoContainer.addEventListener("mouseleave", handleVideoEvent);
-   //    }
-   // };
-
-   // // Ejecutar al cargar la página
-   // manageVideoEvents();
-
-   // mediaQueryPortrait.addListener(manageVideoEvents);
-
    // LOCALES
 
    videos.forEach((video) => {
@@ -638,11 +584,6 @@ const videosSlide = () => {
    const resetVideos = () => {
       let activo = swiper.slides[swiper.activeIndex].children[0];
       if (activo.tagName === "VIDEO") {
-         // iframeSlide.removeAttribute("src");
-         iframeSlide.setAttribute(
-            "src",
-            "https://www.youtube.com/embed/T84TitSO-qg?autoplay=0&mute=1"
-         );
          videosModal.forEach((slide) => {
             let videosSlides = slide.querySelectorAll("video");
             videosSlides.forEach((video) => {
@@ -650,17 +591,6 @@ const videosSlide = () => {
             });
          });
          activo.play();
-      } else if (activo.tagName === "IFRAME") {
-         iframeSlide.setAttribute(
-            "src",
-            "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
-         );
-         videosModal.forEach((slide) => {
-            let videosSlides = slide.querySelectorAll("video");
-            videosSlides.forEach((video) => {
-               stopVideo.call(video);
-            });
-         });
       }
    };
 
@@ -673,11 +603,6 @@ const videosSlide = () => {
    });
 
    myModalEl.addEventListener("hidden.bs.modal", (event) => {
-      iframeSlide.removeAttribute("src");
-      // iframeSlide.setAttribute(
-      //    "src",
-      //    "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
-      // );
       videosModal.forEach((slide) => {
          let hijo = slide.children[0];
          if (hijo.tagName === "VIDEO") {
