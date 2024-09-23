@@ -473,60 +473,58 @@ const toggleMuteAllVideos = () => {
 
 const playVideo = () => {
    // YOUTUBE
-   let videoAdded = false;
+   // let videoAdded = false;
 
-   const videoContainer = document.getElementById("video1");
+   // const videoContainer = document.getElementById("video1");
 
-   const handleVideoEvent = function (event) {
-      event.preventDefault();
+   // const handleVideoEvent = function (event) {
+   //    event.preventDefault();
 
-      if (!videoAdded) {
-         this.querySelector("h4").style.display = "none";
-         this.querySelector("img").style.display = "none";
+   //    if (!videoAdded) {
+   //       this.querySelector("h4").style.display = "none";
+   //       this.querySelector("img").style.display = "none";
 
-         const youtubeTag = document.createElement("iframe");
-         youtubeTag.setAttribute(
-            "src",
-            "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
-         );
-         youtubeTag.setAttribute(
-            "allow",
-            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-         );
-         this.appendChild(youtubeTag);
-         videoAdded = true;
-      } else {
-         // Si ya se agregó el video, removerlo y volver a mostrar el poster y título
-         const iframe = this.querySelector("iframe");
-         if (iframe) {
-            iframe.remove(); // Remueve completamente el iframe
-            this.querySelector("h4").style.display = "block";
-            this.querySelector("img").style.display = "block";
-            videoAdded = false; // Restaura el estado inicial
-         }
-      }
-   };
+   //       const youtubeTag = document.createElement("iframe");
+   //       youtubeTag.setAttribute(
+   //          "src",
+   //          "https://www.youtube.com/embed/T84TitSO-qg?autoplay=1&mute=1"
+   //       );
+   //       youtubeTag.setAttribute(
+   //          "allow",
+   //          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   //       );
+   //       this.appendChild(youtubeTag);
+   //       videoAdded = true;
+   //    } else {
+   //       // Si ya se agregó el video, removerlo y volver a mostrar el poster y título
+   //       const iframe = this.querySelector("iframe");
+   //       if (iframe) {
+   //          iframe.remove(); // Remueve completamente el iframe
+   //          this.querySelector("h4").style.display = "block";
+   //          this.querySelector("img").style.display = "block";
+   //          videoAdded = false; // Restaura el estado inicial
+   //       }
+   //    }
+   // };
 
-   // Función para gestionar los eventos según el tamaño de la ventana
-   const manageVideoEvents = () => {
-      // if (isDesktop()) {
-      if (mediaQueryPortrait.matches) {
-         videoContainer.removeEventListener("mouseenter", handleVideoEvent);
-         videoContainer.removeEventListener("mouseleave", handleVideoEvent);
-         videoContainer.setAttribute("data-bs-toggle", "modal"); // Agregar el modal para mobile
-      } else {
-         videoContainer.removeAttribute("data-bs-toggle"); // Remover el atributo modal para desktop
-         videoContainer.addEventListener("mouseenter", handleVideoEvent);
-         videoContainer.addEventListener("mouseleave", handleVideoEvent);
-      }
-   };
+   // // Función para gestionar los eventos según el tamaño de la ventana
+   // const manageVideoEvents = () => {
+   //    // if (isDesktop()) {
+   //    if (mediaQueryPortrait.matches) {
+   //       videoContainer.removeEventListener("mouseenter", handleVideoEvent);
+   //       videoContainer.removeEventListener("mouseleave", handleVideoEvent);
+   //       videoContainer.setAttribute("data-bs-toggle", "modal"); // Agregar el modal para mobile
+   //    } else {
+   //       videoContainer.removeAttribute("data-bs-toggle"); // Remover el atributo modal para desktop
+   //       videoContainer.addEventListener("mouseenter", handleVideoEvent);
+   //       videoContainer.addEventListener("mouseleave", handleVideoEvent);
+   //    }
+   // };
 
-   // Ejecutar al cargar la página
-   manageVideoEvents();
+   // // Ejecutar al cargar la página
+   // manageVideoEvents();
 
-   // Escuchar el evento 'resize' y volver a ejecutar la lógica
-   // window.addEventListener("resize", manageVideoEvents);
-   mediaQueryPortrait.addListener(manageVideoEvents);
+   // mediaQueryPortrait.addListener(manageVideoEvents);
 
    // LOCALES
 
@@ -616,8 +614,6 @@ mediaQueryPortrait.addListener(initSlider);
 initSlider();
 
 const videosSlide = () => {
-   const iframeSlide = document.querySelector(".swiper-slide iframe");
-
    videosGrid.forEach((video, index) => {
       video.addEventListener("click", function () {
          swiper.slideTo(index);
